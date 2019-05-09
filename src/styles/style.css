@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    
+}
+
+#menu {
+    background-color: grey;
+}
+
+/* РЕЄСТРАЦІЯ / SIGN UP */
+
+#signUp {
+    margin: 3rem 3rem 3rem 5rem;
+    background-color: dodgerblue;
+    
+}
+
+#signUp input[type="text"], input[type="password"]  {
+    display: block;
+}
+
+#signUp input[type="submit"] {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+

@@ -1,0 +1,141 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3507754, 2018-01-10T05:33:37-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: ProximaNova-Black by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/black/
+ *
+ * Webfont: ProximaNova-Bold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+ *
+ * Webfont: ProximaNova-Extrabld by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/extrabld/
+ *
+ * Webfont: ProximaNova-Regular by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ *
+ * Webfont: ProximaNova-Semibold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/semibold/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3507754
+ * Licensed pageviews: 10,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/35862a");
+
+/**
+ * This rule links CSS font family "Proxima" to ProximaNova-Black webfont
+ * whenever font weight value of 900 is specified.
+ */
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_0_0.eot?h=4d770c81');
+    src: url('/webfonts/35862A_0_0.eot?#iefix') format('embedded-opentype'),
+        url('/webfonts/35862A_0_0.woff2?h=48f36da9') format('woff2'),
+        url('/webfonts/35862A_0_0.woff?h=ba36b59a') format('woff'),
+        url('/webfonts/35862A_0_0.ttf?h=6e8c86f8') format('truetype');
+    font-weight: 900;
+}
+
+/**
+ * This rule links CSS font family "Proxima" to ProximaNova-Bold webfont
+ * whenever font weight value of bold (700) is specified.
+ */
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_1_0.eot?h=ce65fc4d');
+    src: url('/webfonts/35862A_1_0.eot?#iefix') format('embedded-opentype'),
+        url('/webfonts/35862A_1_0.woff2?h=b70bf927') format('woff2'),
+        url('/webfonts/35862A_1_0.woff?h=8dcf956b') format('woff'),
+        url('/webfonts/35862A_1_0.ttf?h=42a7a1c6') format('truetype');
+    font-weight: bold;
+}
+
+/**
+ * This rule links CSS font family "Proxima" to ProximaNova-Extrabld webfont
+ * whenever font weight value of 800 is specified.
+ */
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_2_0.eot?h=6a0a1e73');
+    src: url('/webfonts/35862A_2_0.eot?#iefix') format('embedded-opentype'),
+        url('/webfonts/35862A_2_0.woff2?h=98118eae') format('woff2'),
+        url('/webfonts/35862A_2_0.woff?h=5b082c4d') format('woff'),
+        url('/webfonts/35862A_2_0.ttf?h=43cb6efb') format('truetype');
+    font-weight: 800;
+}
+
+/**
+ * This rule links CSS font family "Proxima" to ProximaNova-Regular webfont
+ * whenever font weight value of normal (400) is specified.
+ */
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_3_0.eot?h=6c48f62e');
+    src: url('/webfonts/35862A_3_0.eot?#iefix') format('embedded-opentype'),
+        url('/webfonts/35862A_3_0.woff2?h=92563e91') format('woff2'),
+        url('/webfonts/35862A_3_0.woff?h=20837512') format('woff'),
+        url('/webfonts/35862A_3_0.ttf?h=6531b6d') format('truetype');
+    font-weight: normal;
+}
+
+/**
+ * This rule links CSS font family "Proxima" to ProximaNova-Semibold webfont
+ * whenever font weight value of 600 is specified.
+ */
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_4_0.eot?h=2bd68e9');
+    src: url('/webfonts/35862A_4_0.eot?#iefix') format('embedded-opentype'),
+    url('/webfonts/35862A_4_0.woff2?h=e339771a') format('woff2'),
+    url('/webfonts/35862A_4_0.woff?h=7425f9e') format('woff'),
+    url('/webfonts/35862A_4_0.ttf?h=f3067e3') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Proxima;
+    src: url('/webfonts/35862A_4_0.eot?h=2bd68e9');
+    src: url('/webfonts/35862A_4_0.eot?#iefix') format('embedded-opentype'),
+    url('/webfonts/35862A_4_0.woff2?h=e339771a') format('woff2'),
+    url('/webfonts/35862A_4_0.woff?h=7425f9e') format('woff'),
+    url('/webfonts/35862A_4_0.ttf?h=f3067e3') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Pribambas';
+    src: url('/webfonts/Pribambas.eot?h=2d614725');
+    src: url('/webfonts/Pribambas.eot?#iefix') format('embedded-opentype'),
+    url('/webfonts/Pribambas.woff2?h=72c0dad6') format('woff2'),
+    url('/webfonts/Pribambas.woff?h=dffa6abd') format('woff'),
+    url('/webfonts/Pribambas.ttf?h=81208541') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'MelfmSymbols';
+    src: url('/webfonts/mel-fm.eot?h=19ae68fa');
+    src: url('/webfonts/mel-fm.eot?#iefix') format('embedded-opentype'),
+    url('/webfonts/mel-fm.woff?h=717b02b8') format('woff'),
+    url('/webfonts/mel-fm.ttf?h=e8035793') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ 
