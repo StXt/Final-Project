@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
-import Main from '../components/Main';
-import Header from '../components/Header';
-import Menu from '../components/Menu';
-import Footer from '../components/Footer';
 import '../styles/style.css';
+import Header from '../components/Header';
+import Main from '../components/Main';
+import Footer from '../components/Footer';
 
 export default class Home extends Component {
     render() {
       return (
-          <React.Fragment>
-            <Header />
-            <Menu />
-            <Main />
-            <Footer />
-          </React.Fragment>
+          <div className="home">
+            <div className="head-main">
+              <div className="header-container">
+                <Header />
+              </div>
+              <div className="main-container">
+                <Main />
+              </div>
+            </div>
+            <div className="footer-container">
+              <Footer />
+            </div>
+          </div>
       );
     }
   }

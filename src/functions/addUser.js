@@ -6,7 +6,10 @@ export default function addUser(e)  {
         let newUser = new User();
         let newUserJSON = JSON.stringify(newUser);
         localStorage.setItem(newUser.login, newUser.password);
-        
+        let userKey = `${newUser.login} | ${newUser.password}`;
+        localStorage.setItem(userKey, newUserJSON);
+
         console.log(localStorage);
     }
+    return true;
   }

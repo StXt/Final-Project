@@ -6,17 +6,13 @@ import SignUp from './pages/SignUp';
 import TestSet from './pages/TestSet';
 
 class App extends Component {
-  state = {
-    page: 'Home'
-  }
-
   render() {
     return (
       <Switch>
         <Route exact path='/' component={Home}/>
-        <Route exact path='/login' component={Login}/>
-        <Route exact path='/sign-up' component={SignUp}/>
-        <Route exact path='/test-set' component={TestSet}/>
+        <Route path='/login' component={Login}/>
+        <Route path='/sign-up' component={SignUp}/>
+        <Route path='/test-set' component={TestSet}/> 
       </Switch>
     );
   }
