@@ -5,8 +5,8 @@ class Menu extends React.Component {
         return (
             <nav id="menu">
                 <ul>
-                    <li>Профіль</li>
                     <li>Головна</li>
+                    <li>Профіль</li>
                     <li>Тести</li>
                     <li>Статистика</li>
                     <li>Про нас</li>

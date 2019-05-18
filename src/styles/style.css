@@ -30,7 +30,8 @@ body {
     padding-bottom: 5rem;
 }
 
-/* HEADER */
+/************************************** HEADER *****************************************/
+/***************************************************************************************/
 
 #home-h1 {
     margin: 0;
@@ -58,26 +59,33 @@ body {
     padding-left: 13rem;
 }
 
-/* MAIN  */
+/*************************************** MAIN ******************************************/
+/***************************************************************************************/
 
 .main-container {
     margin: 3rem;
-    min-width: 20vw;
-    min-height: 30vh;
+    margin-right: 6rem;
+    width: 43.75rem;
+    height: 25rem;
+    background-color: rgba(235,235,235,0.4);
 }
 
-#main, #signUp, .loginForm {
-    
+#main, #signUp {
+    padding: 1rem 0 0 0;
     width: 100%;
     font-size: 1.2rem;
-    background-color: rgba(235,235,235,0.4);
+    
+}
+
+#main h1 {
+    color: #bcb5ff;
 }
 
 #main-text {
     padding: 1rem 2rem;
 }
 
-#main .btn {
+.btn {
     margin: 2rem;
     padding: 1rem;
     width: 10rem;
@@ -90,14 +98,15 @@ body {
     
 }
 
-/* FOOTER */
+
+/**************************************** FOOTER ***************************************/
+/***************************************************************************************/
 
 .footer-container {
     position: absolute;
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    background-color: bisque;
 }
 
 footer {   
@@ -147,47 +156,191 @@ footer {
     text-decoration: none;
 }
 
-/* РЕЄСТРАЦІЯ / SIGN UP */
+/********************************* РЕЄСТРАЦІЯ / SIGN UP ********************************/
+/***************************************************************************************/
 
-#signUp input[type="text"], #signUp input[type="password"]  {
-    display: block;
+#signUp {
+    width: 90%;
+    margin: 0 auto;
+    color: #bcb5ff;
+    font-size: 1.2rem;
 }
+
+#signUp label {
+    margin: 1.5rem 2rem;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+#signUp input[type='text'], #signUp input[type='password'] {
+    margin: 0rem 2rem 0 0;
+    position: absolute;
+    right: 0;
+    width: 15rem;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.7rem;
+    color: #bcb5ff;
+    font-size: 1.2rem;
+    background: none;
+}
+
 
 #signUp input[type="submit"] {
     margin: 1rem auto;
     padding: 1rem;
 }
 
-/* LOGIN */
+/***************************************** LOGIN ***************************************/
+/***************************************************************************************/
 
-#loginForm {
-    
+.loginForm {
+    margin: 4.8rem 3rem;
+    font-size: 1.2rem;
+    color: #bcb5ff;   
 }
 
-#enterLogin {
+#enterLogin, #enterPassword {
+    margin: 3rem;
     position: relative;
     text-align: left;
     display: block;
 }
 
-#enterPassword {
-    position: relative;
-    text-align: left;
-    display: block;
-}
-
-#enterLogin input {
+.loginForm input {
     position: absolute;
-    right: 3rem;
+    right: 0;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.8rem;
+    width: 15rem;
+    color: #bcb5ff;
+    background: none;
+    font-size: 1.2rem;
 }
 
-#enterPassword input {
-    position: absolute;
-    right: 3rem;
+.loginForm .btn {
+    margin-top: 4rem;
 }
 
-/* ВИБІР ТЕСТУ / TEST SET */
+/**************************** ВИБІР ТЕСТУ / TEST SET  **********************************/
+/***************************************************************************************/
 
 .testSet {
-    background-color: green;
+    margin: 0;
+    min-height: 100vh;
+    background: url('../images/testSetBack.jpg');
+}
+
+.testSet > div {
+    padding-left: 18vw;
+}
+
+.testSet h1 {
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    color: #807baa;
+}
+
+.testSet h2 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: #807baa;
+}
+
+.testContainer {
+    margin: 0;
+    padding: 2rem 2rem 4rem 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    justify-content: center;
+    /* align-content: space-between; */
+    grid-gap: 2rem;
+}
+
+.testCover {
+    width: 18.75rem;
+    height: 18.75rem;
+    border: 2px solid #4e4a6e;
+    background-color: rgba(172, 84, 84, 0.623);   
+}
+
+.testCover:nth-child(1) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/english.png');
+    background-size: 100% 100%;
+}
+
+.testCover:nth-child(2) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/geography.png');
+    background-size: 100% 100%;
+}
+
+.testCover:nth-child(3) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/history.png');
+    background-size: 100% 100%;
+}
+
+.testCover:nth-child(4) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/medicine.png');
+    background-size: 100% 100%;
+}
+
+.testCover:nth-child(5) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/programing.png');
+    background-size: 100% 100%;
+}
+
+.testCover:nth-child(6) {
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    background-image: url('../images/TestCovers/libra.png');
+    background-size: 100% 100%;
+}
+
+.testTitle {
+    margin: 0 auto;
+    padding-top: 7rem;
+    display: block;
+    color: #bab6db;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/**************************************** MENU *****************************************/
+/***************************************************************************************/
+
+#menu {
+    margin: 0;
+    height: 100vh;
+    width: 18vw;
+    background-color: #445a708a;
+    position: fixed;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#menu li {
+    margin: 0;
+    padding: 1rem 0 1rem 1rem;
+    border-bottom: 1px solid #445a708a;
+    color: #bab6db;
+    font-size: 1.5rem;
 }

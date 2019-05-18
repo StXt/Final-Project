@@ -1,9 +1,11 @@
 /* 
-- !!! вікно "вітаємо на Testudy" змінювалось для реєстрації
-- підігнати стилі під вікна логіна, реєстрації
+-такий користувач вже існує діалогові вікна в дівах
+- зробити, щоб після оновлення тести не злітали, зберігати в LocalStorage
 
--вивчити й застосувати React-Bootstrap
-- зробити кнопку назад для вікна логіна, реєстрації
+- зробити меню з делегуванням подій
+- 
+вивчити й застосувати React-Bootstrap
+
 - локалізація
 - об'єкт підтягнутий з LocalStorage тримати під рукою як перемінну у якомусь JavaScript файлі
 - додати прогрес на тести
@@ -43,3 +45,89 @@ makeRegister() {
 makeLogin() {
     this.setState({value: 'login'})
 } */
+
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import addUser from '../functions/addUser';
+import TestSet from './TestSet';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
+
+
+export default class SignUp extends Component {
+  constructor(props) {
+    super(props);
+    
+    this.form = (
+      <form id="signUp">
+        <label>Ім'я<input type="text" name="firstName" id="firstName" /></label>
+        <label>Прізвище<input type="text" name="lastName" id="lastName" /></label>
+        <label>Логін<input type="text" name="login" id="login" /></label>
+        <label>Пароль<input type="password" name="password" id="password" /></label>
+        <label>Повторіть пароль<input type="password" name="password" id="checkPassword" /></label>
+        <button onClick={this.combinedFunc} className="btn">
+          Зберегти
+        </button>
+      </form>
+    );
+
+    this.state = {
+      isRegister: false
+    };
+  }
+
+  combinedFunc = () => {
+    let isAdded = addUser();
+
+    if (isAdded === undefined) {
+      this.setState({isRegister: 'registered'});
+    } else if (isAdded) {
+      this.setState({isRegister: true});
+    }
+    return;    
+  }
+
+  render() {    
+    if(this.state.isRegister === true) {
+      alert('regist good');
+      return (
+      <Redirect to="/test-set" />
+      )
+    } else if (this.state.isRegister === 'registered') {
+      alert('already registered');
+      return (
+        <div className="home">
+          <div className="head-main">
+            <div className="header-container">
+              <Header />
+            </div>
+            <div className="main-container">
+            <h4>Користувач з таким іменем вже існує</h4>
+              {this.form}
+            </div>
+          </div>
+          <div className="footer-container">
+            <Footer />
+          </div>
+        </div>
+      )
+    } else {
+      return (
+        <div className="home">
+          <div className="head-main">
+            <div className="header-container">
+              <Header />
+            </div>
+            <div className="main-container">
+              {this.form}
+            </div>
+          </div>
+          <div className="footer-container">
+            <Footer />
+          </div>
+        </div>
+      )
+    }
+  }
+}

@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import TestSet from './pages/TestSet';
+import TestGround from './pages/TestGround';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         <Route path='/login' component={Login}/>
         <Route path='/sign-up' component={SignUp}/>
         <Route path='/test-set' component={TestSet}/> 
+        <Route path='/test-ground' component={TestGround}/>
       </Switch>
     );
   }

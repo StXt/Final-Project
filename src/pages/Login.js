@@ -5,18 +5,46 @@ import Footer from '../components/Footer';
 import { Redirect } from 'react-router-dom';
 
 export default class Login extends Component {
-  state = {
-    isEnter: false
+  constructor(props) {
+    super(props);
+
+    this.loginForm = (
+      <form className="loginForm">
+        <label id="enterLogin">Логін: <input type="text"/></label>
+        <label  id="enterPassword">Пароль: <input type="password"/></label>
+        <button onClick={this.combinedFunc} className="btn">Увійти</button>
+        <button onClick={this.goBack} className="btn">Повернутись</button>
+        
+      </form>
+    );
+
+    this.loginFail = (
+      <div className="loginForm">
+        {this.loginForm}
+        <div>Невірний логін або пароль. Повторіть введення.</div>
+      </div>
+    )
+
+    this.state = {
+      isEnter: false
+    }
+  }
+  
+  goBack = (e) => {
+    e.preventDefault();
+    this.setState({back: true});
   }
 
   combinedFunc = (e) => {
     e.preventDefault();
     let login = document.forms[0].elements[0].value;
     let password = document.forms[0].elements[1].value;
-
+    alert('hi from func');
     if(isUser(login, password)) {
+      console.log('isenter: true');
       this.setState({isEnter: true});
     } else {
+      console.log('isenter: false');
       this.setState({
         isEnter: false,
         isFailed: true
@@ -26,35 +54,46 @@ export default class Login extends Component {
 
    
   render() {
+    if (this.state.back === true) {
+      return (
+        <Redirect to="/" />
+      )
+    }
+
     if (this.state.isEnter) {
       return (
         <Redirect to="/test-set"/>
       )
     } else if (this.state.isFailed === true) {
       return (
-        <div id="loginPage">
-          <Header />
-          <div className="loginForm">
-            <form>
-              <label>Логін: <input type="text" id="enterLogin"/></label>
-              <label>Пароль: <input type="password" id="enterPassword"/></label>
-              <button onClick={this.combinedFunc}>Увійти</button>
-            </form>
-            <div>Невірний логін або пароль. Повторіть введення.</div>
+        <div className="home">
+        <div className="head-main">
+          <div className="header-container">
+            <Header />
           </div>
+          <div className="main-container">
+            {this.loginFail}
+          </div>
+        </div>
+        <div className="footer-container">
           <Footer />
         </div>
+      </div>
       )
     } else {
       return (
-        <div id="loginPage">
-          <Header />
-          <form className="loginForm">
-            <label id="enterLogin">Логін: <input type="text"/></label>
-            <label  id="enterPassword">Пароль:<input type="password"/></label>
-            <button onClick={this.combinedFunc}>Увійти</button>
-          </form>
-          <Footer />
+        <div className="home">
+          <div className="head-main">
+            <div className="header-container">
+              <Header />
+            </div>
+            <div className="main-container">
+              {this.loginForm}
+            </div>
+          </div>
+          <div className="footer-container">
+            <Footer />
+          </div>
         </div>
       )
     }
