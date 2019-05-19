@@ -1,4 +1,12 @@
 // Перша відповідь правильна всередині масиву
+import agroregions from '../images/tests/geography/agroregions.jpg';
+import animals from '../images/tests/geography/animals.jpg';
+import demography from '../images/tests/geography/demography.jpg';
+import industry from '../images/tests/geography/industry.jpg';
+import rivers from '../images/tests/geography/rivers.jpg';
+import soil from '../images/tests/geography/soil.jpg';
+import tree from '../images/tests/geography/tree.jpg';
+import world from '../images/tests/geography/world.jpg';
 
 let geography = [
     {
@@ -30,7 +38,8 @@ let geography = [
     },
     {
         question: 'Доберіть назву до картосхеми України.',
-        imageSrc: 'rivers',
+        imageSrc: rivers,
+        imageAlt: 'річки України на карті',
         answers: [
             '«Басейни річок»',
             '«Долини річок»',
@@ -130,7 +139,8 @@ let geography = [
     },
     {
         question: 'Проаналізуйте поширення зональних типів ґрунтів в одній з областей України. Які основні типи рослинності зумовили процеси ґрунтоутворення в цій місцевості?',
-        imageSrc: 'soil',
+        imageSrc: soil,
+        imageAlt: 'Грунти України',
         answers: [
             'справжні й полиново-типчакові степи',
             'соснові та ялинові ліси, гірські луки',
@@ -149,7 +159,8 @@ let geography = [
     },
     {
         question: 'За добіркою поштових марок розпізнайте природоохоронний об’єкт України.',
-        imageSrc: 'animals',
+        imageSrc: animals,
+        imageAlt: 'Тварини україніських заповідників',
         answers: [
             'Шацький національний природний парк',
             'національний природний парк «Гуцульщина»',
@@ -159,7 +170,8 @@ let geography = [
     },
     {
         question: 'Проаналізуйте графічну модель демографічних процесів в Україні протягом 1965-2015 рр. Визначте особливість динаміки руху населення протягом останніх 15 років порівняно з попереднім періодом.',
-        imageSrc: 'demography',
+        imageSrc: demography,
+        imageAlt: 'Демографічна ситуація в Україні в таблиці',
         answers: [
             'сповільнюється темп скорочення населення',
             'почався перехід до першого типу відтворення населення',
@@ -178,7 +190,8 @@ let geography = [
     },
     {
         question: 'На картосхемі України позначено розташування найбільших',
-        imageSrc: 'industry',
+        imageSrc: industry,
+        imageAlt: 'Промислові вузли на карті України',
         answers: [
             'атомних та гідравлічних електростанцій',
             'центрів важкого машинобудування',
@@ -215,7 +228,8 @@ let geography = [
     },
     {
         question: 'Проаналізуйте відображені на картограмі регіональні відмінності обсягів виробництва певного виду сільськогосподарської продукції та визначте цей вид продукції.',
-        imageSrc: 'agroregions',
+        imageSrc: agroregions,
+        imageAlt: 'Регіональні розташування агрокультур',
         answers: [
             'соняшникове насіння',
             'цукровий буряк',
@@ -252,7 +266,8 @@ let geography = [
     },
     {
         question: 'На картосхемі темним кольором позначено десять країн-лідерів за обсягом',
-        imageSrc: 'world',
+        imageSrc: world,
+        imageAlt: 'Промисловий видобуток у світі',
         answers: [
             'виплавки чорнової міді',
             'виплавки сталі',
@@ -343,7 +358,8 @@ let geography = [
     },
     {
         question: 'Яку закономірність географічної оболонки відображено на рисунку?',
-        imageSrc: 'tree',
+        imageSrc: tree,
+        imageAlt: 'Дерева в різні пори року',
         answers: [
             'ритмічність',
             'цілісність',

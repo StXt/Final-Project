@@ -1,23 +1,52 @@
 import React, { Component } from 'react';
 
 
+
 export default class Test extends Component {
-    constructor(props) {
+     constructor(props) {
         super(props);
+
+        this.state = {
+            imageExists: null
+        }
+    }
+
+    isImage = () => {
+        if (this.props.test.imageSrc) {
+            localStorage.setItem('imageExists', true);
+        } else {
+            localStorage.removeItem('imageExists');
+            
+        }
     }
 
     render() {
-        const test=this.props.test;
-        return (
-            <div>
-                <p>{test.question}</p>
+        this.isImage();
+        if (localStorage.imageExists === 'true') {
+            return (
+                <div>
+                    <p>{this.props.test.question}</p>
+                    <img src={this.props.test.imageSrc} alt={this.props.test.imageAlt}/>
+                    <ul>
+                        <li>{this.props.test.answers[0]}</li>
+                        <li>{this.props.test.answers[1]}</li>
+                        <li>{this.props.test.answers[2]}</li>
+                        <li>{this.props.test.answers[3]}</li>
+                    </ul>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                <p>{this.props.test.question}</p>
                 <ul>
-                    <li>{test.answers[0]}</li>
-                    <li>{test.answers[1]}</li>
-                    <li>{test.answers[2]}</li>
-                    <li>{test.answers[3]}</li>
+                    <li>{this.props.test.answers[0]}</li>
+                    <li>{this.props.test.answers[1]}</li>
+                    <li>{this.props.test.answers[2]}</li>
+                    <li>{this.props.test.answers[3]}</li>
                 </ul>
             </div>
-        )
+            )
+        }
     }
 }

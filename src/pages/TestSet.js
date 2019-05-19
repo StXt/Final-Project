@@ -7,7 +7,6 @@ import { history } from '../data/history';
 import { law } from '../data/law';
 import { medicine } from '../data/medicine';
 import stirNumbers from '../functions/stirNumbers';
-import Test from '../components/Test';
 import Footer from '../components/Footer';
 import Menu from '../components/Menu';
  
@@ -55,23 +54,19 @@ export default class TestSet extends Component {
         return orderedTests;
     }    
     
-    createTests = (orderedTests) => {
-        let testList = orderedTests.map((testText) => {return <Test test={testText}/>});
-        return testList;
-    }
+    
 
     initiateTest = (e) => {
         let target = e.target;
   
         while (target.className !== 'testContainer') {
             if (target.className === 'testCover') {
-                let choosenTest = this.responsiveArray[target.children[0].id];
-                console.log(choosenTest);
-                
+                let choosenTest = this.responsiveArray[target.children[0].id];                
                 let stirTestsResult = this.stirTests(choosenTest);
-                let createTestsResult = this.createTests(stirTestsResult);
-                createTestsResult = JSON.stringify(createTestsResult);
-                window.localStorage.setItem('currentTestStack', createTestsResult);
+                console.log(stirTestsResult);
+                
+                stirTestsResult = JSON.stringify(stirTestsResult);
+                window.localStorage.setItem('currentTestStack', stirTestsResult);
                 window.localStorage.setItem('currentTestNumber', 0);
                 this.setState({choosen: true});
                 return;

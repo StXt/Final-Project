@@ -11,6 +11,56 @@
 - додати прогрес на тести
 */
 
+import React, { Component } from 'react';
+
+
+export default class Test extends Component {
+    constructor(props) {
+        super(props);
+
+        this.image = (
+            <img src={this.props.test.imageSrc} alt={this.props.test.imageAlt}/>
+        )
+
+        this.simpleTest = (
+            <div>
+                <p>{this.props.test.question}</p>
+                <ul>
+                    <li>{this.props.test.answers[0]}</li>
+                    <li>{this.props.test.answers[1]}</li>
+                    <li>{this.props.test.answers[2]}</li>
+                    <li>{this.props.test.answers[3]}</li>
+                </ul>
+            </div>
+        )
+
+        this.imageTest = (
+            <div>
+                <p>{this.props.test.question}</p>
+                {this.image}
+                <ul>
+                    <li>{this.props.test.answers[0]}</li>
+                    <li>{this.props.test.answers[1]}</li>
+                    <li>{this.props.test.answers[2]}</li>
+                    <li>{this.props.test.answers[3]}</li>
+                </ul>
+            </div>
+        )
+    }
+
+    render() {
+        if(this.props.test.imageSrc) {
+            return this.imageTest
+        } else {
+            return this.simpleTest
+        }
+    }
+}
+
+
+
+
+
 
 <button id="myButton" class="float-left submit-button" >Home</button>
 
