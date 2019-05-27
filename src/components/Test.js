@@ -25,8 +25,8 @@ export default class Test extends Component {
         if (localStorage.imageExists === 'true') {
             return (
                 <div>
-                    <p>{this.props.test.question}</p>
-                    <img src={this.props.test.imageSrc} alt={this.props.test.imageAlt}/>
+                    <p>{+localStorage.currentTestNumber + 1}. {this.props.test.question}</p>
+                    <img src={this.props.test.imageSrc} alt={this.props.test.imageAlt} className="testImage"/>
                     <ul>
                         <li>{this.props.test.answers[0]}</li>
                         <li>{this.props.test.answers[1]}</li>
@@ -38,7 +38,7 @@ export default class Test extends Component {
         } else {
             return (
                 <div>
-                <p>{this.props.test.question}</p>
+                <p>{+localStorage.currentTestNumber}. {this.props.test.question}</p>
                 <ul>
                     <li>{this.props.test.answers[0]}</li>
                     <li>{this.props.test.answers[1]}</li>

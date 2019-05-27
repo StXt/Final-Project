@@ -3,6 +3,14 @@ import {BrowserRouter} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {history, unlisten} from './components/react-history';
+
+
+// Use push, replace, and go to navigate around.
+history.push('/');
+
+// To stop listening, call the function returned from listen().
+unlisten();
 
 ReactDOM.render((
     <BrowserRouter>     

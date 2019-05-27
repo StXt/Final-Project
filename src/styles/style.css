@@ -196,7 +196,7 @@ footer {
 /***************************************************************************************/
 
 .loginForm {
-    margin: 4.8rem 3rem;
+    margin: 4.8rem 3rem 0 3rem;
     font-size: 1.2rem;
     color: #bcb5ff;   
 }
@@ -343,4 +343,68 @@ footer {
     border-bottom: 1px solid #445a708a;
     color: #bab6db;
     font-size: 1.5rem;
+}
+
+/*************************************** TESTS *****************************************/
+/***************************************************************************************/
+
+.testGround {
+    margin: 0;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+    background: url('../images/birdBranch2.png');
+    background-size: cover;
+    
+}
+
+.testGround h1 {
+    padding: 0rem;
+    text-align: center;
+    color: #9592b1;
+}
+
+.testGround footer {
+    background-color: #4e4a6ea6;
+}
+
+.testDesk {
+    margin: 2rem 0 0 5rem;
+    width: 60rem;
+    height: 50rem;
+    background-color:;
+}
+
+.testPrepared {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+}
+
+.testPrepared p {
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #9592b1; 
+}
+
+.testImage {
+    display: block;
+    margin: 0 auto;
+    padding: 0rem 5rem 2rem 0rem;
+}
+
+.testPrepared ul {
+    list-style: none;
+}
+
+.testPrepared li {
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 1rem;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #9592b1;
+    background-color: rgba(157, 158, 158, 0.308);
 }

@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import addUser from '../functions/addUser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import {history, unlisten} from '../components/react-history';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -19,18 +20,19 @@ export default class SignUp extends Component {
           Зберегти
         </button>
         <button onClick={this.goBack} className="btn">
-          Повернутись
+          Увійти
         </button>
       </form>
     );
 
     this.state = {
-      isRegister: false
+      isRegister: null
     };
   }
 
   goBack = (e) => {
     e.preventDefault();
+    history.push('/sign-up');
     this.setState({back: true});
   }
 
@@ -38,24 +40,30 @@ export default class SignUp extends Component {
   combinedFunc = (e) => {
     e.preventDefault();
 
-    let isAdded = addUser();
-    alert(isAdded);
-
-    if (isAdded) {
+    let isAdded = addUser(); // виконається в будь-якому випадку 
+    
+    if (isAdded) { // буде true/false
       this.setState({isRegister: true});
     }
   }
 
   render() {    
     if(this.state.isRegister === true) {
+      
       return (
         <Redirect to='/test-set' />
       )
     }
 
+    if (this.state.isRegister === false) {
+      return (// Компонент форми + Fail div
+        <Redirect to="/login" />
+      )
+    }
+
     if (this.state.back === true) {
       return (
-        <Redirect to="/" />
+        <Redirect to="/login" />
       )
     }
 

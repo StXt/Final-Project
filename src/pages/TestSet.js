@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import {history, unlisten} from '../components/react-history';
 import { geography } from '../data/geography';
 import { english } from '../data/english';
 import { programming } from '../data/programming';
-import { history } from '../data/history';
+import { historyTest } from '../data/historyTest';
 import { law } from '../data/law';
 import { medicine } from '../data/medicine';
 import stirNumbers from '../functions/stirNumbers';
@@ -67,7 +68,10 @@ export default class TestSet extends Component {
                 
                 stirTestsResult = JSON.stringify(stirTestsResult);
                 window.localStorage.setItem('currentTestStack', stirTestsResult);
+                window.localStorage.setItem('currentTestChapter', target.children[0].id);
                 window.localStorage.setItem('currentTestNumber', 0);
+
+                history.push('/test-set');
                 this.setState({choosen: true});
                 return;
             }

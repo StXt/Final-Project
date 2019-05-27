@@ -2,363 +2,363 @@
 
 let english = [
     {
-        question: 'Які наукові наслідки Першої навколосвітньої подорожі?',
+        question: 'Martin is a very _____ boy. Everybody likes him.',
         answers: [
-            'доведено, що Земля має форму кулі, а всі океани сполучені між собою',
-            'виявлено, що на Землі площа суходолу більша, ніж поверхні океанів',
-            'досягнуто точки Північного полюса й узбережжя Антарктиди',
-            'підтверджено існування шести материків і чотирьох океанів'
+            'polite',
+            'rude',
+            'lazy',
+            'selfish'
         ]
     },
     {
-        question: 'Яка форма рельєфу утворюється в результаті дії зовнішніх сил, описаних в уривку з художнього твору: «Навесні в борозну ринув каламутний потік талої води. Він мчав схилом униз, поглиблюючи вибоїну, розмиваючи її, підточуючи її стінки, забираючи з собою часом цілі брили землі»?',
+        question: 'Albert is really _____. He always makes me laugh.',
         answers: [
-            'яр',
-            'печера',
-            'річкова долина',
-            'улоговина видування'
+            'funny',
+            'honest',
+            'supportive',
+            'sincere'
         ]
     },
     {
-        question: '',
+        question: 'Adam is very _____. He enjoys sharing with people.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'generous',
+            'noisy',
+            'stingy',
+            'shy'
         ]
     },
     {
-        question: '',
+        question: 'You can trust secrets to Jane. She is a _____ person.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'reliable',
+            'helpful',
+            'friendly',
+            'sensitive'
         ]
     },
     {
-        question: '',
+        question: 'There is nothing to do. I\'m really _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'bored',
+            'sensitive',
+            'polite',
+            'hardworking'
         ]
     },
     {
-        question: '',
+        question: 'Julia was very _____ to see her husband on TV.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'surprised',
+            'noisy',
+            'quiet',
+            'bored'
         ]
     },
     {
-        question: '',
+        question: 'Maria is only 5 but she can read and write. She is really_____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'clever',
+            'interested',
+            'angry',
+            'sad'
         ]
     },
     {
-        question: '',
+        question: 'I had a/an _____dream last night. It was a real nightmare.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'bad',
+            'interesting',
+            'sweet',
+            'good'
         ]
     },
     {
-        question: '',
+        question: 'Martin is a/an _____ person. He has no money.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'poor',
+            'exciting',
+            'shocking',
+            'rich'
         ]
     },
     {
-        question: '',
+        question: 'My brother was ill last week but now he is getting _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'better',
+            'gooder',
+            'smarter',
+            'more'
         ]
     },
     {
-        question: '',
+        question: 'I\'m going to Barcelona next week. I\'m so _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'excited',
+            'careful',
+            'lazy',
+            'shocked'
         ]
     },
     {
-        question: '',
+        question: 'It was a/an _____ film. I cried in the end.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'sad',
+            'sensible',
+            'bored',
+            'funny'
         ]
     },
     {
-        question: '',
+        question: 'Jill is _____ to go to school today. She is in a bad mood.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'unwilling',
+            'excited',
+            'untidy',
+            'cheerful'
         ]
     },
     {
-        question: '',
+        question: 'John is a/an _____ person. He always breaks things around.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'clumsy',
+            'careful',
+            'reliable',
+            'flexible'
         ]
     },
     {
-        question: '',
+        question: 'You must be really _____ if you want to finish this boring project.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'patient',
+            'interesting',
+            'unwilling',
+            'friendly'
         ]
     },
     {
-        question: '',
+        question: 'You need to be really _____ to play chess.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'focused',
+            'funny',
+            'rich',
+            'unusual'
         ]
     },
     {
-        question: 'Які наукові наслідки Першої навколосвітньої подорожі?',
+        question: 'It\'s _____ to have a foreign passport to travel abroad.',
         answers: [
-            'доведено, що Земля має форму кулі, а всі океани сполучені між собою',
-            'виявлено, що на Землі площа суходолу більша, ніж поверхні океанів',
-            'досягнуто точки Північного полюса й узбережжя Антарктиди',
-            'підтверджено існування шести материків і чотирьох океанів'
+            'necessary',
+            'healthy',
+            'pleasant',
+            'needing'
         ]
     },
     {
-        question: 'Яка форма рельєфу утворюється в результаті дії зовнішніх сил, описаних в уривку з художнього твору: «Навесні в борозну ринув каламутний потік талої води. Він мчав схилом униз, поглиблюючи вибоїну, розмиваючи її, підточуючи її стінки, забираючи з собою часом цілі брили землі»?',
+        question: 'Clara is never late for appointments. She is a/an _____ person.',
         answers: [
-            'яр',
-            'печера',
-            'річкова долина',
-            'улоговина видування'
+            'punctual',
+            'honest',
+            'clever',
+            'independent'
         ]
     },
     {
-        question: '',
+        question: 'Martha enjoys meeting her friends. She is a very _____ person.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'communicative',
+            'organized',
+            'reserved',
+            'independent'
         ]
     },
     {
-        question: '',
+        question: 'He always tells the truth. He is a/an _____ person.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'honest',
+            'focused',
+            'punctual',
+            'interesting'
         ]
     },
     {
-        question: '',
+        question: 'My daughter believes absolutely everything you tell her. She’s a/an _____ girl.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'gullible',
+            'intellectual',
+            'illiterate',
+            'tolerant'
         ]
     },
     {
-        question: '',
+        question: 'Aunt Mary believes horoscopes, carries lucky charms with her and hates black cats. She’s so _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'superstitious',
+            'intellectual',
+            'intimidating',
+            'cynical'
         ]
     },
     {
-        question: '',
+        question: 'He’s a/an _____ actor able to play any kind of roles – from comic to dramatic.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'versatile',
+            'sensitive',
+            'illiterate',
+            'organized'
         ]
     },
     {
-        question: '',
+        question: 'Dennis is rather shy and unconfident. He always feels _____ to his peers.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'inferior',
+            'junior',
+            'bold',
+            'exhausted'
         ]
     },
     {
-        question: '',
+        question: 'She was so _____ in the book she was reading that she didn’t notice me come into the room.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'engrossed',
+            'mesmerized',
+            'impressed',
+            'fascinating'
         ]
     },
     {
-        question: '',
+        question: 'The synonym for wonderful is _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'fantastic',
+            'awful',
+            'fantasy',
+            'writer'
         ]
     },
     {
-        question: '',
+        question: 'You will need a _____ to open a bottle of wine',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'corkscrew',
+            'screwcork',
+            'corker',
+            'crew'
         ]
     },
     {
-        question: '',
+        question: 'The opposite of good-looking is _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'ugly',
+            'handsome',
+            'attractive',
+            'crappy'
         ]
     },
     {
-        question: '',
+        question: 'You will use a _____ to keep warm at sleep.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'blanket',
+            'pillow',
+            'socks',
+            'pants'
         ]
     },
     {
-        question: '',
+        question: 'Susie is my ex-wife. We _____ 2 years ago.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'divorced',
+            'married',
+            'engaged',
+            'broke'
         ]
     },
     {
-        question: '',
+        question: 'A person who takes interviews for a newspaper is a _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'reporter',
+            'journalism',
+            'writer',
+            'artist'
         ]
     },
     {
-        question: '',
+        question: 'You need to _____ some water to make tea.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'boil',
+            'drink',
+            'cook',
+            'drain'
         ]
     },
     {
-        question: '',
+        question: 'If I want to put a picture on the wall I will need a _____ and a nail.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'hammer',
+            'buttery',
+            'brush',
+            'pliers'
         ]
     },
     {
-        question: '',
+        question: 'We need to _____ it with all our colleagues before we decide.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'discuss',
+            'tell',
+            'talk',
+            'speak'
         ]
     },
     {
-        question: '',
+        question: 'I don\'t have a bank card so I always pay in _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'cash',
+            'money',
+            'coins',
+            'currency'
         ]
     },
     {
-        question: '',
+        question: 'I have a car but I don\'t have a driving _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'license',
+            'certificate',
+            'document',
+            'order'
         ]
     },
     {
-        question: '',
+        question: 'When you pay for something in a store you normally get a _____.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'receipt',
+            'bill',
+            'recipe',
+            'check'
         ]
     },
     {
-        question: '',
+        question: 'I saw a very good _____ advertisement in a paper last week.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'job',
+            'work',
+            'occupation',
+            'enterprisement'
         ]
     },
     {
-        question: '',
+        question: 'I hate doing the _____, especially washing the windows.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'housework',
+            'homework',
+            'jobs',
+            'gig'
         ]
     },
     {
-        question: '',
+        question: 'She is a bit _____. She always tells you how to do everything.',
         answers: [
-            '',
-            '',
-            '',
-            ''
+            'bossy',
+            'friendly',
+            'lazy',
+            'crazy'
         ]
     }
 ]

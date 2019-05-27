@@ -3,6 +3,7 @@ import isUser from '../functions/isUser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Redirect } from 'react-router-dom';
+import {history, unlisten} from '../components/react-history';
 
 export default class Login extends Component {
   constructor(props) {
@@ -13,15 +14,14 @@ export default class Login extends Component {
         <label id="enterLogin">Логін: <input type="text"/></label>
         <label  id="enterPassword">Пароль: <input type="password"/></label>
         <button onClick={this.combinedFunc} className="btn">Увійти</button>
-        <button onClick={this.goBack} className="btn">Повернутись</button>
-        
+        <button onClick={this.goBack} className="btn">Зареєструватися</button>
       </form>
     );
 
     this.loginFail = (
       <div className="loginForm">
         {this.loginForm}
-        <div>Невірний логін або пароль. Повторіть введення.</div>
+        <div className="failMessage">Невірний логін або пароль. Повторіть введення.</div>
       </div>
     )
 
@@ -32,19 +32,21 @@ export default class Login extends Component {
   
   goBack = (e) => {
     e.preventDefault();
+    history.push('/login');
     this.setState({back: true});
+    
   }
 
   combinedFunc = (e) => {
     e.preventDefault();
     let login = document.forms[0].elements[0].value;
     let password = document.forms[0].elements[1].value;
-    alert('hi from func');
+    
     if(isUser(login, password)) {
-      console.log('isenter: true');
+      console.log('isEnter: true');
       this.setState({isEnter: true});
     } else {
-      console.log('isenter: false');
+      console.log('isEnter: false');
       this.setState({
         isEnter: false,
         isFailed: true
@@ -55,12 +57,14 @@ export default class Login extends Component {
    
   render() {
     if (this.state.back === true) {
+      history.push('/login');
       return (
-        <Redirect to="/" />
+        <Redirect to="/sign-up" />
       )
     }
 
     if (this.state.isEnter) {
+      history.push('/login');
       return (
         <Redirect to="/test-set"/>
       )

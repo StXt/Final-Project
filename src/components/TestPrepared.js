@@ -27,23 +27,23 @@ export default class TestPreparation extends Component {
         const testList = this.createTests(this.props.tests);
         if (this.state.testNumber < currentLength - 1) {
             return (
-                <div>
-                    <span>{this.state.testNumber + 1}</span>
+                <div className="testPrepared">
                     {testList[this.state.testNumber]}
-                    <button onClick={this.changeTest}>Наступний тест</button>
+                    <button onClick={this.changeTest} className="btn">Наступний тест</button>
                 </div>
             )
         } else if (this.state.testNumber < currentLength) { 
             return (
-                <div>
+                <div className="testPrepared">
                     {testList[this.state.testNumber]}
-                    <button onClick={this.changeTest}>Завершити тест</button>
+                    <button onClick={this.changeTest} className="btn">Завершити тест</button>
                 </div>
             )
         } else {
             return (
                 <div>
-                    Отримайте ваші результати
+                    Ваш результат
+                    <button>Відповіді</button>
                 </div>
             )
         }
