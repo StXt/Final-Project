@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import addUser from '../functions/addUser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {history, unlisten} from '../components/react-history';
+import {history} from '../components/react-history';
 
 export default class SignUp extends Component {
   constructor(props) {

@@ -3,7 +3,7 @@ import isUser from '../functions/isUser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Redirect } from 'react-router-dom';
-import {history, unlisten} from '../components/react-history';
+import {history} from '../components/react-history';
 
 export default class Login extends Component {
   constructor(props) {

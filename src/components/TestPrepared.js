@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import Test from './Test';
+
 
 export default class TestPreparation extends Component {     
     state = {
@@ -8,43 +10,45 @@ export default class TestPreparation extends Component {
 
     createTests = (orderedTests) => {
         let testList = orderedTests.map(
-            (testText) => {
-                return <Test test={testText}/>
+            (test) => {
+                return <Test test={test}/>
             }
         );
         return testList;
     }
 
     changeTest = () => {
+        if(localStorage.wasClick === 'false') {
+            return
+        }    
         let nextTestIndex = +localStorage.currentTestNumber + 1;
-        console.log(+this.state.testNumber + 2);
         localStorage.setItem('currentTestNumber', nextTestIndex);
         this.setState({testNumber: nextTestIndex});
+        window.localStorage.setItem('wasClick', false);
+        
     }
     
     render() {
-        let currentLength = JSON.parse(localStorage.currentTestStack).length;
-        const testList = this.createTests(this.props.tests);
+        const currentLength = this.props.tests.length;
+        const tests = this.createTests(this.props.tests);
+
         if (this.state.testNumber < currentLength - 1) {
             return (
                 <div className="testPrepared">
-                    {testList[this.state.testNumber]}
-                    <button onClick={this.changeTest} className="btn">Наступний тест</button>
+                    {tests[this.state.testNumber]}
+                    <button onClick={this.changeTest} className="btn">Далі</button>
                 </div>
             )
         } else if (this.state.testNumber < currentLength) { 
             return (
                 <div className="testPrepared">
-                    {testList[this.state.testNumber]}
+                    {tests[this.state.testNumber]}
                     <button onClick={this.changeTest} className="btn">Завершити тест</button>
                 </div>
             )
         } else {
             return (
-                <div>
-                    Ваш результат
-                    <button>Відповіді</button>
-                </div>
+                <Redirect to="/test-result" />
             )
         }
     }
