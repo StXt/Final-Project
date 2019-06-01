@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import TestPrepared from '../components/TestPrepared';
+import Timer from '../components/Timer';
 import Footer from '../components/Footer';
 
 export default class TestPage extends Component {
-
-
     getChapterName = () => {
         return localStorage.testStackName;
     }
@@ -14,13 +13,16 @@ export default class TestPage extends Component {
         mixedTestStack = JSON.parse(mixedTestStack);
     
         return (
-            <div className="testGround">
-                <div>
-                    <h1>Обраний тест: {this.getChapterName()}</h1>
-                </div>
-                <div className="testDesk">
-                    <TestPrepared tests={mixedTestStack}/>
-                </div>
+            <div className="testPage">
+                
+                    <div>
+                        <h1>Обраний тест: {this.getChapterName()}</h1>
+                        <Timer />
+                    </div>
+                    <div className="testDesk">
+                        <TestPrepared tests={mixedTestStack}/>
+                    </div>
+
                 <div className="footer-container">
                     <Footer />
                 </div>                

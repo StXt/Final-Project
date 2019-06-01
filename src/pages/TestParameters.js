@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import TestSetArea from '../components/TestSetArea';
 import Footer from '../components/Footer';
 import Menu from '../components/Menu';
-import attandance from '../images/attendance.png';
- 
-export default class TestSet extends Component {
-    render() {
+import ParametersForm from '../components/ParametersForm';
+
+export default class TestParameters extends Component {  
+    render() { 
         return (
-            <div className="testSet">
+            <div className="testParameters">
                 <Menu />
-                <div>
+                <section>
                     <h1 className='testudy'>Testudy</h1>
                     {/* <img src={attandance} alt="little logo"  /> */}
-                    <TestSetArea />
+                    <ParametersForm />
                     <div className="footer-container">
                         <Footer />
                     </div>
-                </div>
+                </section>
             </div>
         )
     }

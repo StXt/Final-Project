@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
+import {history} from './react-history';
 import Test from './Test';
 
 
@@ -19,7 +20,7 @@ export default class TestPreparation extends Component {
 
     changeTest = () => {
         if(localStorage.wasClick === 'false') {
-            return
+            return;
         }    
         let nextTestIndex = +localStorage.currentTestNumber + 1;
         localStorage.setItem('currentTestNumber', nextTestIndex);
@@ -47,6 +48,7 @@ export default class TestPreparation extends Component {
                 </div>
             )
         } else {
+            history.push('/test-page');
             return (
                 <Redirect to="/test-result" />
             )
