@@ -41,13 +41,18 @@ export default class ParametersForm extends Component {
 
     }
     
+componentDidMount() {
+    let btn = document.getElementsByClassName('btn')[0];
+    btn.focus();
+}
+
     render() {
         if (this.state.choosed === true) {
             return (
                 <Redirect to="/test-page" />
             )
         }
-
+        
         return (
             <div className="parametersWrapper">
                 <h2>Оберіть параметри тесту</h2>
@@ -55,7 +60,7 @@ export default class ParametersForm extends Component {
                     
                     <label><span>Час на тестування: </span>
                         <select name="testTime" id="testTime">
-                        <option value="1">1 хвилина</option>
+                            <option value="1">1 хвилина</option>
                             <option value="5" selected>5 хвилин</option>
                             <option value="10">10 хвилин</option>
                             <option value="20">20 хвилин</option>

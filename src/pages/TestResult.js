@@ -42,6 +42,7 @@ export default class TestResult extends Component {
         return (
             <div className="testResult">
                 <h1>Ваш результат: <span>{+localStorage.correctCounter / +localStorage.testAmount * 100}%</span></h1>
+                {this.recomendations}
                 <button className="btn" onClick={this.toggleAnswers}>{this.buttonText}</button>
                 {answers}
                 <div className="footer-container">

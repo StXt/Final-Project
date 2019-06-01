@@ -11,15 +11,15 @@ export default class Login extends Component {
 
     this.loginForm = (
       <form className="loginForm">
-        <label id="enterLogin">Логін: <input type="text"/></label>
-        <label  id="enterPassword">Пароль: <input type="password"/></label>
+        <label id="enterLogin">Логін: <input type="text" placeholder="Login"/></label>
+        <label  id="enterPassword">Пароль: <input type="password" placeholder="password"/></label>
         <button onClick={this.combinedFunc} className="btn">Увійти</button>
         <button onClick={this.goBack} className="btn">Зареєструватися</button>
       </form>
     );
 
     this.loginFail = (
-      <div className="loginForm">
+      <div>
         {this.loginForm}
         <div className="failMessage">Невірний логін або пароль. Повторіть введення.</div>
       </div>
@@ -54,7 +54,6 @@ export default class Login extends Component {
     }
   }
 
-   
   render() {
     if (this.state.back === true) {
       history.push('/login');

@@ -161,11 +161,12 @@ footer {
 }
 
 #main h1 {
-    color: #bcb5ff;
+    color: #afaae7;
 }
 
 #main-text {
     padding: 1rem 2rem;
+    line-height: 2rem;
 }
 
 .btn {
@@ -173,8 +174,8 @@ footer {
     padding: 1rem;
     width: 10rem;
     border-radius: 2rem;
-    border: 1px solid #6789aa;
-    color: #6789aa;
+    border: 1px solid #615aa0;
+    color: #615aa0;
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -211,6 +212,12 @@ footer {
     background: none;
 }
 
+#signUp input[type='text']::placeholder, #signUp input[type='password']::placeholder {
+    font-size: 1rem;
+    color: #ffdebf9a;
+
+}
+
 
 #signUp input[type="submit"] {
     margin: 1rem auto;
@@ -231,6 +238,11 @@ footer {
     position: relative;
     text-align: left;
     display: block;
+}
+
+.loginForm input[type='text']::placeholder, .loginForm input[type='password']::placeholder {
+    font-size: 1rem;
+    color: #ffdebf91;
 }
 
 .loginForm input {
@@ -469,11 +481,15 @@ footer {
     margin: 0;
     padding: 2rem;
     text-align: center;
-    color: #9592b1;
+    color: #615aa0;
 }
 
-.testPage footer {
-    background-color: #4e4a6ea6;
+.timerString {
+    margin: 0;
+    padding: 2rem 2rem 2rem 9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #da9e83;
 }
 
 .testDesk {
@@ -493,7 +509,7 @@ footer {
     padding-bottom: 4rem;
     font-size: 1.3rem;
     font-weight: 450;
-    color: #9592b1; 
+    color: #615aa0; 
 }
 
 .testImage {
@@ -512,7 +528,7 @@ footer {
     width: 80%;
     font-size: 1.3rem;
     font-weight: 450;
-    color: #9592b1;
+    color: #615aa0;
     background-color: rgba(24, 26, 26, 0.308);
 }
 
@@ -524,16 +540,27 @@ footer {
     background-color: rgba(245, 183, 158, 0.753);
 }
 
+.testPage footer {
+    background-color: #4e4a6ea6;
+}
+
 /*********************************** TEST RESULT ***************************************/
 /***************************************************************************************/
 
 .testResult {
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
     padding-bottom: 8rem;
+    background-image: url('../images/hexagonals.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .testResult h1 {
-    margin: 5rem;
-    color: #9592b1;
+    margin: 0;
+    padding: 5rem;
+    color: #615aa0;
     font-size: 3rem;
     text-align: center;
 }
@@ -543,13 +570,34 @@ footer {
     font-size: 4rem;
 }
 
+.goodPercent {
+
+}
+
+.mediorcePercent {
+
+}
+
+.badPercent {
+
+}
+
 .testResult .btn {
     margin: 2rem auto;
     width: 15rem;
     display: block;
-
 }
 
+.testResult footer {
+    color: rgb(63, 57, 57);
+    background-color: rgba(204, 196, 226, 0.808);
+}
+
+.testResult #author a {
+    color: #9277a8;
+    font-weight: 600;
+    text-decoration: none;
+}
 .testResult .resultQuestion {
     padding: 3rem 8rem;
 }

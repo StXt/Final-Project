@@ -30,7 +30,7 @@ export default class TestPreparation extends Component {
     }
     
     render() {
-        const currentLength = this.props.tests.length;
+        const currentLength = +localStorage.testAmount;
         const tests = this.createTests(this.props.tests);
 
         if (this.state.testNumber < currentLength - 1) {

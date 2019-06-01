@@ -28,7 +28,9 @@ export default class TestAnswer extends React.Component {
     render() {
         if(localStorage.wasClick === 'false') {
             if(this.state.correct === true) {
-                
+                let btn = document.getElementsByClassName('btn')[0];
+                btn.focus({preventScroll : true});
+                console.log(btn);
                 localStorage.setItem('wasClick', true);
                 window.localStorage.setItem('correctCounter', +localStorage.correctCounter + 1);
                 return (
@@ -37,6 +39,9 @@ export default class TestAnswer extends React.Component {
             }
 
             if(this.state.correct === false) {
+                let btn = document.getElementsByClassName('btn')[0];
+                btn.focus({preventScroll : true});
+                console.log(btn);
                 localStorage.setItem('wasClick', true);
                 return (
                     <li className='falseAnswer'>{this.props.answerData.answer}</li>

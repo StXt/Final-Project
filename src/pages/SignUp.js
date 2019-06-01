@@ -11,11 +11,11 @@ export default class SignUp extends Component {
     
     this.form = (
       <form id="signUp">
-        <label>Ім'я<input type="text" name="firstName" id="firstName" /></label>
-        <label>Прізвище<input type="text" name="lastName" id="lastName" /></label>
-        <label>Логін<input type="text" name="login" id="login" /></label>
-        <label>Пароль<input type="password" name="password" id="password" /></label>
-        <label>Повторіть пароль<input type="password" name="password" id="checkPassword" /></label>
+        <label>Ім'я<input type="text" name="firstName" id="firstName" placeholder="Name"/></label>
+        <label>Прізвище<input type="text" name="lastName" id="lastName" placeholder="Last name"/></label>
+        <label>Логін<input type="text" name="login" id="login" placeholder="Login"/></label>
+        <label>Пароль<input type="password" name="password" id="password" placeholder="password"/></label>
+        <label>Повторіть пароль<input type="password" name="password" id="checkPassword" placeholder="password"/></label>
         <button onClick={this.combinedFunc} className="btn">
           Зберегти
         </button>

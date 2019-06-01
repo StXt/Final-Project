@@ -14,7 +14,6 @@ export default class TestPage extends Component {
     
         return (
             <div className="testPage">
-                
                     <div>
                         <h1>Обраний тест: {this.getChapterName()}</h1>
                         <Timer />
