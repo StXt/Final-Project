@@ -19,8 +19,10 @@ export default class Login extends Component {
           <span>Пароль: </span>
           <input type="password" placeholder="password"/>
         </label>
-        <button onClick={this.combinedFunc} className="btn">Увійти</button>
-        <button onClick={this.goBack} className="btn">Зареєструватися</button>
+        <div className="buttons">
+          <button onClick={this.combinedFunc} className="btn">Увійти</button>
+          <button onClick={this.goBack} className="btn">Зареєструватися</button>
+        </div>
       </form>
     );
 
@@ -49,6 +51,8 @@ export default class Login extends Component {
     let password = document.forms[0].elements[1].value;
     
     if(isUser(login, password)) {
+      let userKey = `${login} | ${password}`;
+      localStorage.setItem('currentUser', userKey);
       console.log('isEnter: true');
       this.setState({isEnter: true});
     } else {

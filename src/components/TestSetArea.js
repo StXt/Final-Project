@@ -8,7 +8,6 @@ import { historyTest } from '../data/historyTest';
 import { law } from '../data/law';
 import { medicine } from '../data/medicine';
 import stirTests from '../functions/stirTests';
-import TestParameters from '../pages/TestParameters';
 
 export default class TestArea extends Component {
     constructor(props) {
@@ -40,7 +39,6 @@ export default class TestArea extends Component {
 
                 history.push('/test-set');
                 this.setState({choosen: true});
-                console.log(localStorage);
                 return;
             }
             target = target.parentNode;

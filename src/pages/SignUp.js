@@ -31,12 +31,14 @@ export default class SignUp extends Component {
           <span>Повторіть пароль</span>
           <input type="password" name="password" id="checkPassword" placeholder="password"/>
         </label>
-        <button onClick={this.combinedFunc} className="btn">
-          Зберегти
-        </button>
-        <button onClick={this.goBack} className="btn">
-          Увійти
-        </button>
+        <div className="buttons">
+          <button onClick={this.combinedFunc} className="btn">
+            Зберегти
+          </button>
+          <button onClick={this.goBack} className="btn">
+            Увійти
+          </button>
+          </div>
       </form>
     );
 

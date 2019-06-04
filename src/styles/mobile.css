@@ -333,8 +333,18 @@
         bottom: 0;
     }
 
+    .aboutText p {
+        font-size: 1rem;
+        text-align: justify;
+    }
 
+    .aboutText .aboutContacts {
+        text-align: left;
+        font-size: 1rem;
+    }
 
-
+    .aboutContacts span {
+        display: block;
+    }
 
 }

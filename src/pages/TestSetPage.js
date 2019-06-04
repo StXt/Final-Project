@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import TestSetArea from '../components/TestSetArea';
 import Footer from '../components/Footer';
 import Menu from '../components/Menu';
-import attandance from '../images/attendance.png';
  
 export default class TestSet extends Component {
     render() {
+        if (localStorage.currentUser === "") {
+            return (
+                <Redirect to="/" />
+            )
+        }
+
         return (
             <div className="testSet">
                 <Menu />

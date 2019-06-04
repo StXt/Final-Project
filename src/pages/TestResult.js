@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import Menu from '../components/Menu';
 
 import Footer from '../components/Footer';
@@ -40,6 +41,12 @@ export default class TestResult extends Component {
     }
 
     render() {
+        if (localStorage.currentUser === "") {
+            return (
+                <Redirect to="/" />
+            )
+        }
+
         const answers = this.state.displayed && <section>{this.parseAnswers()}</section>; // Замінити цю частину
         return (
             <div className="ordinaryPages testResult">

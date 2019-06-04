@@ -10,12 +10,15 @@ class Main extends Component {
                 <p id="main-text">Якщо знання - це сила, то Testudy - спортмайдан, де ви можете нею помірятись. 
                 Testudy - місце, що допоможе Вам визначити актуальний рівень своїх знань у найрізноманітніших
                 сферах і отримати правильні рекомендації, щодо їх процвітання.</p>
+                
+                <div className="buttons">
                 <Link to="/sign-up">
                     <button className="btn">Зареєструватися</button>
                 </Link>
                 <Link to="/login">
                     <button className="btn">Увійти</button>    
                 </Link>
+                </div>
             </section>
         )
     };

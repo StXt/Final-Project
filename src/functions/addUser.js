@@ -8,6 +8,7 @@ export default function addUser()  {
         localStorage.setItem(newUser.login, newUser.password);
         let userKey = `${newUser.login} | ${newUser.password}`;
         localStorage.setItem(userKey, newUserJSON);
+        localStorage.setItem('currentUser', userKey);
         console.log(localStorage);
         return true;
     }

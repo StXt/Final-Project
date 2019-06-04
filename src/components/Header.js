@@ -1,12 +1,10 @@
 import React, {Component} from 'react';
-import Slider from './Slider';
 import '../styles/mobile.css';
 
 export default class Header extends Component {
 
 
     render() {      
-        const [left,right] = ['left', 'right'];
         return (
             <header id="header">
                 <h1 className="testudy">Testudy</h1>
@@ -15,7 +13,6 @@ export default class Header extends Component {
                     <br/>
                     <span id="socrates"><em>Socrates</em></span>
                 </h3>
-                <Slider />
             </header>
         );
     }

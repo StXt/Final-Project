@@ -6,8 +6,10 @@ import SignUp from './pages/SignUp';
 import TestSet from './pages/TestSetPage';
 import TestGround from './pages/TestPage';
 import TestResult from './pages/TestResult';
-import HeaderSlider from './pages/Slider/HeaderSlider';
 import TestParameters from './pages/TestParameters';
+import AboutUs from './pages/AboutUs';
+import Stats from './pages/Stats';
+import Profile from './pages/Profile';
 
 class App extends Component {
   render() {
@@ -23,7 +25,6 @@ class App extends Component {
         <Route path='/about-us' component={AboutUs}/>
         <Route path='/stats' component={Stats}/>
         <Route path='/profile' component={Profile}/>     
-        <Route path='/slider' component={HeaderSlider}/>
       </Switch>
     );
   }

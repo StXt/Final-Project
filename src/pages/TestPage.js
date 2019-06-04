@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import TestPrepared from '../components/TestPrepared';
 import Timer from '../components/Timer';
 import Footer from '../components/Footer';
@@ -9,6 +10,12 @@ export default class TestPage extends Component {
     }
     
     render() {
+        if (localStorage.currentUser === "") {
+            return (
+                <Redirect to="/" />
+            )
+        }
+
         let mixedTestStack = localStorage.mixedTestStack;
         mixedTestStack = JSON.parse(mixedTestStack);
     

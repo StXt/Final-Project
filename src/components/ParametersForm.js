@@ -20,7 +20,14 @@ export default class ParametersForm extends Component {
 
     setTestAmount = () => {
         let testAmount = document.getElementById('testAmount').value;
-        console.log(localStorage);
+        if (+testAmount > 40) {
+            testAmount = 40;
+        }
+        
+        if (+testAmount < 5) {
+            testAmount = 5;
+        }
+
         let mixedTestStack = JSON.parse(localStorage.mixedTestStack);
         let correctAnswers = JSON.parse(localStorage.correctAnswers);
         mixedTestStack.length = testAmount;
@@ -33,6 +40,8 @@ export default class ParametersForm extends Component {
     }
     
     modifyTestStack = (e) => {
+        
+
         e.preventDefault();
         history.push('./test-parameters');
         this.setEndTime();
@@ -69,7 +78,7 @@ componentDidMount() {
                     </label>
                     <label>
                         <span>Кількість тестів:</span>
-                        <input type="number" name="testAmount" value="10" max="40" min="5" id="testAmount"/>
+                        <input type="number" name="testAmount" max="40" min="5" id="testAmount"/>
                         </label>
                     <button onClick={this.modifyTestStack} className="btn">Почати тест</button>
                 </form>

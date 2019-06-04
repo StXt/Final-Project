@@ -16,4 +16,33 @@
         padding: 1rem;
         font-size: 2.5rem;
     }
+
+    .ordinaryPages {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .ordinaryContainer {
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    .closed {
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    .aboutText {
+        margin: 0 auto;
+        width: 90vw;
+        padding: 0;
+    }
+
+    .aboutText {
+        padding: 1rem;
+    }
+
+    .map {
+        margin: 0;
+        width: 100vw;
+    }
 }
