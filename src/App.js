@@ -20,6 +20,9 @@ class App extends Component {
         <Route path='/test-parameters' component={TestParameters}/> 
         <Route path='/test-page' component={TestGround}/>
         <Route path='/test-result' component={TestResult}/>
+        <Route path='/about-us' component={AboutUs}/>
+        <Route path='/stats' component={Stats}/>
+        <Route path='/profile' component={Profile}/>     
         <Route path='/slider' component={HeaderSlider}/>
       </Switch>
     );

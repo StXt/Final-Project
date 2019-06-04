@@ -7,6 +7,11 @@ import '../../styles/style.css';
 import Header from '../../components/Header';
 import Main from '../../components/Main';
 import Footer from '../../components/Footer';
+import books from '../../images/backgrounds/books.jpg';
+import globus from '../../images/backgrounds/globus.jpg';
+import letter from '../../images/backgrounds/letter.jpg';
+import loupe from '../../images/backgrounds/loupe.jpg';
+import telescope from '../../images/backgrounds/telescope4.png';
 
 export default class HeaderSlider extends Component {
   render() {
@@ -22,7 +27,7 @@ export default class HeaderSlider extends Component {
       arrows: true
     };
     return (
-      <div className="container">
+      <div className="sliderContainer">
         <Slider {...settings}>
           <div>
             <img className="img-item" src="http://placekitten.com/g/400/200" />
@@ -37,19 +42,19 @@ export default class HeaderSlider extends Component {
             <img className="img-item" src="http://placekitten.com/g/400/200" />
           </div>
         </Slider>
-        <div className="home">
-            <div className="head-main">
-              <div className="header-container">
-                <Header />
-              </div>
-              <div className="main-container">
-                <Main />
-              </div>
+        <div className=".homeSlider">
+          <div className="head-main">
+            <div className="header-container">
+              <Header />
             </div>
-            <div className="footer-container">
-              <Footer />
+            <div className="main-container">
+              <Main />
             </div>
           </div>
+          <div className="footer-container">
+            <Footer />
+          </div>
+        </div>
       </div>
     );
   }

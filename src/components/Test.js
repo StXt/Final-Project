@@ -65,7 +65,7 @@ export default class Test extends Component {
         if (localStorage.imageExists === 'true') {
             return (
                 <div>
-                    <p>{+localStorage.currentTestNumber + 1}. {this.props.test.question}</p>
+                    <p className="questionText">{+localStorage.currentTestNumber + 1}. {this.props.test.question}</p>
                     <img src={this.props.test.imageSrc} alt={this.props.test.imageAlt} className="testImage"/>
                     <ul className='answers'>
                         <TestAnswer answerData={data1}/>

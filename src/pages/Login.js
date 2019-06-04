@@ -11,8 +11,14 @@ export default class Login extends Component {
 
     this.loginForm = (
       <form className="loginForm">
-        <label id="enterLogin">Логін: <input type="text" placeholder="Login"/></label>
-        <label  id="enterPassword">Пароль: <input type="password" placeholder="password"/></label>
+        <label id="enterLogin">
+          <span>Логін: </span>
+          <input type="text" placeholder="Login"/>
+        </label>
+        <label  id="enterPassword">
+          <span>Пароль: </span>
+          <input type="password" placeholder="password"/>
+        </label>
         <button onClick={this.combinedFunc} className="btn">Увійти</button>
         <button onClick={this.goBack} className="btn">Зареєструватися</button>
       </form>

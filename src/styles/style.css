@@ -9,28 +9,89 @@ body {
     overflow-y: auto;
 }
 
-.header-container {
-    margin-right: 5rem;
+.sliderContainer {
+    margin: 2rem 2rem 2rem 4rem;
+    width: 35rem;
+    height: 17rem;
+    display: flex;
+}
+
+.arrow {
+    width: 5rem;
+    height: 17rem;
+    background-color: #da9e83;
+}
+
+.outerContainer {
+    width: 25rem;
+    height: 17rem;
+    overflow: hidden;
+    background-color: #092c24;
+}
+
+.middleContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-right: 1rem;
+    padding-right: 2rem; /*This would hide the scroll bar of the right. To be sure we hide the scrollbar on every browser, increase this value*/
+    padding-bottom: 2rem;
+}
+
+.innerContainer {
+    margin: 0 1rem;
+    min-width: 100rem;
+    height: 17rem;
+    background-color: #48d1b1;
 }
 
 .home {
     margin: 0 auto;
-    height: 100vh;
     position: relative;
     color: rgb(233, 217, 217);
     text-align: center;
-    background-image: url('../images/backgrounds/telescope4.png');
-    background-color: black;
+    width: 100%;
+    height: 100vh;
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-color: black;
+    /* backface-visibility: hidden;
+    animation: slideBg 50s infinite 0s;
+    animation-direction:alternate;
+    animation-delay: 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    background-image: url('../images/backgrounds/loupe.png');
 }
+
+/* @keyframes slideBg {
+    0% {
+        background-image: url('../images/backgrounds/telescope4.png');
+    }
+
+    25% {
+        background-image: url('../images/backgrounds/books.jpg');
+    }
+
+    50% {
+        background-image: url('../images/backgrounds/globus.jpg');
+    }
+
+    75% {
+        background-image: url('../images/backgrounds/letter.jpg');
+    }
+
+    100% {
+        background-image: url('../images/backgrounds/loupe.jpg');
+    }
+} */
 
 .head-main {
     display: flex;
     padding-bottom: 5rem;
 }
 
-/************************************** HEADER *****************************************/
+/************************************** header  ****************************************/
 /***************************************************************************************/
 
 .testudy {
@@ -46,7 +107,7 @@ body {
 
 #home-h3 {
     margin: 0;
-    padding: 3rem 0 0 3rem;
+    padding: 1rem 0 0 3rem;
     width: 30vw;
     font-size: 2rem;
     text-align: left;
@@ -58,6 +119,8 @@ body {
 #socrates {
     padding-left: 13rem;
 }
+
+
 
 /**************************************** FOOTER ***************************************/
 /***************************************************************************************/
@@ -75,7 +138,7 @@ footer {
     display: grid;
     grid-template-columns: auto 15rem;
     color: rgb(233, 217, 217);
-    background-color: rgba(235,235,235,0.4);
+    background-color: rgba(134, 134, 134, 0.418);
 }
 
 .icons {
@@ -142,6 +205,21 @@ footer {
     font-size: 1.5rem;
 }
 
+.menu-icon {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    display: none;
+    
+}
+
+.menu-line {
+   margin-top: 0.5rem;
+   width: 2.2rem;
+   height: 0.2rem;
+   border-radius: 5%;
+   background-color: #bab6db;
+}
+
 /*************************************** MAIN ******************************************/
 /***************************************************************************************/
 
@@ -150,7 +228,7 @@ footer {
     margin-right: 6rem;
     width: 43.75rem;
     height: 25rem;
-    background-color: rgba(235,235,235,0.4);
+    background-color: rgba(134, 134, 134, 0.418);
 }
 
 #main, #signUp {
@@ -161,6 +239,7 @@ footer {
 }
 
 #main h1 {
+    margin: 0 auto;
     color: #afaae7;
 }
 
@@ -295,7 +374,7 @@ footer {
     color: #807baa;
 }
 
-.testSet .footer-container {
+.testSet .footer-container, .testResult .footer-container {
     width: 82vw;
 }
 
@@ -307,6 +386,10 @@ footer {
     text-align: center;
     justify-content: center;
     grid-gap: 2rem;
+}
+
+.resultContainer {
+    padding-left: 18vw;
 }
 
 .testCover {
@@ -547,7 +630,7 @@ footer {
 /*********************************** TEST RESULT ***************************************/
 /***************************************************************************************/
 
-.testResult {
+.ordinaryPages {
     margin: 0;
     min-height: 100vh;
     box-sizing: border-box;
@@ -557,7 +640,7 @@ footer {
     background-attachment: fixed;
 }
 
-.testResult h1 {
+.ordinaryPages h1 {
     margin: 0;
     padding: 5rem;
     color: #615aa0;
@@ -565,7 +648,14 @@ footer {
     text-align: center;
 }
 
-.testResult h1 span {
+@media (min-width: 769px) {
+    .ordinaryPages h1 {
+        padding: 5rem 5rem 5rem 10rem;
+    }
+}
+
+
+.ordinaryPages h1 span {
     margin: 3rem;
     font-size: 4rem;
 }
@@ -582,24 +672,9 @@ footer {
 
 }
 
-.testResult .btn {
-    margin: 2rem auto;
-    width: 15rem;
-    display: block;
-}
-
-.testResult footer {
-    color: rgb(63, 57, 57);
-    background-color: rgba(204, 196, 226, 0.808);
-}
-
-.testResult #author a {
-    color: #9277a8;
-    font-weight: 600;
-    text-decoration: none;
-}
 .testResult .resultQuestion {
     padding: 3rem 8rem;
+    background-color: rgba(255, 228, 196, 0.527)
 }
 
 .testResult .resultAnswer {
@@ -607,3 +682,24 @@ footer {
     padding: 1rem;
     background-color: rgba(167, 219, 124, 0.719);
 }
+
+.ordinaryPages .btn {
+    margin: 2rem auto;
+    width: 15rem;
+    display: block;
+}
+
+.ordinaryPages footer {
+    color: rgb(63, 57, 57);
+    background-color: rgba(204, 196, 226, 0.808);
+}
+
+.ordinaryPages #author a {
+    color: #9277a8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/************************************* ABOUT US ****************************************/
+/***************************************************************************************/
+

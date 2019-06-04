@@ -1,6 +1,5 @@
 body {
   position: relative;
-  
 }
 
 .container {
@@ -12,7 +11,8 @@ body {
     width: 100%;
 }
 
-.home {
+.homeSlider {
+  z-index: 1;
   margin: 0 auto;
   height: 100vh;
   position: absolute;

@@ -67,7 +67,10 @@ componentDidMount() {
                             <option value="40">40 хвилин</option>
                         </select>
                     </label>
-                    <label>Кількість тестів:<input type="number" name="testAmount" value="10" max="40" min="5" id="testAmount"/></label>
+                    <label>
+                        <span>Кількість тестів:</span>
+                        <input type="number" name="testAmount" value="10" max="40" min="5" id="testAmount"/>
+                        </label>
                     <button onClick={this.modifyTestStack} className="btn">Почати тест</button>
                 </form>
             </div>

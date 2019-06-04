@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Menu from '../components/Menu';
+
 import Footer from '../components/Footer';
 import CorrectAnswer from '../components/CorrectAnswer';
 
@@ -40,13 +42,16 @@ export default class TestResult extends Component {
     render() {
         const answers = this.state.displayed && <section>{this.parseAnswers()}</section>; // Замінити цю частину
         return (
-            <div className="testResult">
-                <h1>Ваш результат: <span>{+localStorage.correctCounter / +localStorage.testAmount * 100}%</span></h1>
-                {this.recomendations}
-                <button className="btn" onClick={this.toggleAnswers}>{this.buttonText}</button>
-                {answers}
-                <div className="footer-container">
-                    <Footer />
+            <div className="ordinaryPages testResult">
+                <Menu />
+                <div className="ordinaryContainer resultContainer">
+                    <h1>Ваш результат: <span>{+localStorage.correctCounter / +localStorage.testAmount * 100}%</span></h1>
+                    {this.recomendations}
+                    <button className="btn" onClick={this.toggleAnswers}>{this.buttonText}</button>
+                    {answers}
+                    <div className="footer-container">
+                        <Footer />
+                    </div>
                 </div>
             </div>
         )

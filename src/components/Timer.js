@@ -28,7 +28,10 @@ export default class Timer extends Component {
 
     render() {
         return (
-            <p className="timerString">До кінця тесту залишилось: {countdown(this.state.time)}</p>
+            <p className="timerString">
+                <span>До кінця тесту залишилось: </span>
+                <span>{countdown(this.state.time)}</span>
+            </p>
         )
     }
 }
