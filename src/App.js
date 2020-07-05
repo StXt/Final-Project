@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import SignUp from './pages/SignUp';
-import TestSet from './pages/TestSetPage';
-import TestGround from './pages/TestPage';
-import TestResult from './pages/TestResult';
-import TestParameters from './pages/TestParameters';
-import AboutUs from './pages/AboutUs';
-import Stats from './pages/Stats';
-import Profile from './pages/Profile';
+import Home from './pages/home/home';
+import Login from './pages/login';
+import SignUp from './pages/sign-up';
+import TestSet from './pages/testing-set-page';
+import TestGround from './pages/testing-page';
+import TestResult from './pages/testing-result';
+import TestParameters from './pages/testing-parameters';
+import AboutUs from './pages/about-us';
+import Stats from './pages/stats';
+import Profile from './pages/profile';
 
 class App extends Component {
   render() {

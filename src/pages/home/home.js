@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import '../styles/style.css';
-import '../styles/tablet.css';
-import '../styles/mobile.css';
-import '../styles/mobile.min.css';
+import '../../styles/style.css';
+import '../../styles/tablet.css';
+import '../../styles/mobile.css';
+import '../../styles/mobile.min.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Header from '../components/Header';
-import Main from '../components/Main';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Main from '../../components/Main';
+import Footer from '../../components/Footer';
 
 export default class Home extends Component {
   render() {
