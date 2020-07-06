@@ -1,6 +1,4 @@
 import React from 'react';
-import '../styles/style.css';
-
 
 export default class TestAnswer extends React.Component {
     constructor(props) {

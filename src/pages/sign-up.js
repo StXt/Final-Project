@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import addUser from '../functions/addUser';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {history} from '../components/react-history';
+import { history } from '../components/react-history';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -47,19 +47,19 @@ export default class SignUp extends Component {
     };
   }
 
-  goBack = (e) => {
+  goBack(e) {
     e.preventDefault();
     history.push('/sign-up');
     this.setState({back: true});
   }
 
 
-  combinedFunc = (e) => {
+  combinedFunc(e) {
     e.preventDefault();
 
-    let isAdded = addUser(); // виконається в будь-якому випадку 
+    let isAdded = addUser(); // is launched in any case 
     
-    if (isAdded) { // буде true/false
+    if (isAdded) { // will be true/false
       this.setState({isRegister: true});
     }
   }
@@ -73,7 +73,7 @@ export default class SignUp extends Component {
     }
 
     if (this.state.isRegister === false) {
-      return (// Компонент форми + Fail div
+      return (// Form component + Fail div
         <Redirect to="/login" />
       )
     }

@@ -42,7 +42,6 @@ export default class Login extends Component {
     e.preventDefault();
     history.push('/login');
     this.setState({back: true});
-    
   }
 
   combinedFunc = (e) => {
@@ -60,7 +59,7 @@ export default class Login extends Component {
       this.setState({
         isEnter: false,
         isFailed: true
-        })
+      });
     }
   }
 
