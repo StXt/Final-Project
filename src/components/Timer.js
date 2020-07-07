@@ -2,36 +2,36 @@ import React, { Component } from 'react';
 import countdown from '../functions/countdown';
 
 export default class Timer extends Component {
-    constructor(props) {
-        super(props);
-    
-        this.state = {
-            time: +localStorage.endTime + 1000 - new Date()
-        }
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      time: +localStorage.endTime + 1000 - new Date()
     }
+  }
 
-    timer = () => {
-        setInterval(
-            () => this.setState({
-                time: this.state.time - 1000
-            }), 1000
-        )
-    }
+  timer = () => {
+    setInterval(
+      () => this.setState({
+        time: this.state.time - 1000
+      }), 1000
+    )
+  }
 
-    componentDidMount() {
-        this.timer();
-    }
+  componentDidMount() {
+    this.timer();
+  }
 
-    componentWillUnmount() {
-        this.timer();
-    }
+  componentWillUnmount() {
+    this.timer();
+  }
 
-    render() {
-        return (
-            <p className="timerString">
-                <span>До кінця тесту залишилось: </span>
-                <span>{countdown(this.state.time)}</span>
-            </p>
-        )
-    }
+  render() {
+    return (
+      <p className="timerString">
+        <span>До кінця тесту залишилось: </span>
+        <span>{countdown(this.state.time)}</span>
+      </p>
+    )
+  }
 }

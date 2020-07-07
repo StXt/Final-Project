@@ -1,7 +1,7 @@
 let picAlt = [
-        'hello',
-        'world',
-        'geography'
-    ];
+  'hello',
+  'world',
+  'geography',
+];
 
 export default picAlt;
