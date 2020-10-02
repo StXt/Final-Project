@@ -1,9 +1,7 @@
 import React from 'react';
-import {BrowserRouter} from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './app';
 import * as serviceWorker from './serviceWorker';
-
 
 // Use push, replace, and go to navigate around.
 // history.push('/');
@@ -12,9 +10,7 @@ import * as serviceWorker from './serviceWorker';
 // unlisten();
 
 ReactDOM.render((
-  <BrowserRouter>     
-    <App />
-  </BrowserRouter>
+  <App />
 ), document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
