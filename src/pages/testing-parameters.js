@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Footer from '../common/footer-component/footer';
+import Footer from '../common/footer-component/footer-component';
 import Menu from '../common/Menu';
 import ParametersForm from '../common/ParametersForm';
 

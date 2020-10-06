@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Header from '../../common/header-component/Header';
+import Header from '../../common/header-component/header-component';
 import Main from './main-component/main-component';
-import Footer from '../../common/footer-component/footer';
+import Footer from '../../common/footer-component/footer-component';
 
 export default class Home extends Component {
   render() {

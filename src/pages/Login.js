@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { history } from '../common/react-history';
 import isUser from '../functions/isUser';
-import Header from '../common/header-component/Header';
-import Footer from '../common/footer-component/footer';
+import Header from '../common/header-component/header-component';
+import Footer from '../common/footer-component/footer-component';
 
 
 

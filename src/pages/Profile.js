@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { history } from '../common/react-history';
 
-import Footer from '../common/footer-component/footer';
+import Footer from '../common/footer-component/footer-component';
 import Menu from '../common/Menu';
 
 export default class Profile extends Component {

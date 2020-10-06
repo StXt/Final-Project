@@ -1,4 +1,5 @@
 import React from 'react';
+import './footer-component.css';
 import facebook from '../../images/icons/facebook.png';
 import twitter from '../../images/icons/twitter.png';
 import whatsapp from '../../images/icons/whatsapp.png';
@@ -7,7 +8,7 @@ import instagram from '../../images/icons/instagram.png';
 export default class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer className="footer">
         <div className="icons">
           <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.3"></script>
           <a target="http://localhost:3000" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A3000%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore">
@@ -28,8 +29,7 @@ export default class Footer extends React.Component {
           </a>
         </div>
         <div id="author">
-          <span>Written by <a href="mailto:st_dom@gmail.com">Stas Domanskyi</a></span>
-          <span >All rights reserved ®</span>
+          <span>Written by <a href="mailto:st_dom@gmail.com">Stas Domanskyi</a> &#169;2019-2020</span>
         </div>
       </footer>
     )

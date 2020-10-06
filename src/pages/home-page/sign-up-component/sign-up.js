@@ -3,8 +3,8 @@ import { Redirect } from 'react-router-dom';
 import { history } from '../../../common/react-history';
 
 import addUser from '../../../functions/addUser';
-import Header from '../../../common/header-component/Header';
-import Footer from '../../../common/footer-component/footer';
+import Header from '../../../common/header-component/header-component';
+import Footer from '../../../common/footer-component/footer-component';
 
 
 export default class SignUp extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import Menu from '../common/Menu';
-import Footer from '../common/footer-component/footer';
+import Footer from '../common/footer-component/footer-component';
 import CorrectAnswer from '../common/correct-answer';
 
 export default class TestResult extends Component {

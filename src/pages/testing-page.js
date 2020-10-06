@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import TestPrepared from '../common/TestPrepared';
 import Timer from '../common/Timer';
-import Footer from '../common/footer-component/footer';
+import Footer from '../common/footer-component/footer-component';
 
 export default class TestPage extends Component {
   getChapterName() {
