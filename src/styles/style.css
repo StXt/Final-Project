@@ -1,0 +1,749 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sliderContainer {
+    margin: 2rem 2rem 2rem 4rem;
+    width: 35rem;
+    height: 17rem;
+    display: flex;
+}
+
+.arrow {
+    width: 5rem;
+    height: 17rem;
+    background-color: #da9e83;
+}
+
+.outerContainer {
+    width: 25rem;
+    height: 17rem;
+    overflow: hidden;
+    background-color: #092c24;
+}
+
+.middleContainer {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    margin-right: 1rem;
+    padding-right: 2rem; /*This would hide the scroll bar of the right. To be sure we hide the scrollbar on every browser, increase this value*/
+    padding-bottom: 2rem;
+}
+
+.innerContainer {
+    margin: 0 1rem;
+    min-width: 100rem;
+    height: 17rem;
+    background-color: #48d1b1;
+}
+
+.home {
+    margin: 0 auto;
+    position: relative;
+    color: rgb(233, 217, 217);
+    text-align: justify;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: black;
+    /* backface-visibility: hidden;
+    animation: slideBg 50s infinite 0s;
+    animation-direction:alternate;
+    animation-delay: 5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    background-image: url('../images/backgrounds/loupe.png');
+}
+
+/* @keyframes slideBg {
+    0% {
+        background-image: url('../images/backgrounds/telescope4.png');
+    }
+
+    25% {
+        background-image: url('../images/backgrounds/books.jpg');
+    }
+
+    50% {
+        background-image: url('../images/backgrounds/globus.jpg');
+    }
+
+    75% {
+        background-image: url('../images/backgrounds/letter.jpg');
+    }
+
+    100% {
+        background-image: url('../images/backgrounds/loupe.jpg');
+    }
+} */
+
+.head-main {
+    display: flex;
+    padding-bottom: 5rem;
+}
+
+/************************************** header *****************************************/
+/***************************************************************************************/
+
+.testudy {
+    margin: 0;
+    padding: 2rem 0 0 3rem;
+    width: 30vw;
+    background: -webkit-linear-gradient(0, rgba(230, 191, 21, 0.8), rgba(245, 208, 208, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3rem;
+    text-align: left;
+}
+
+#home-h3 {
+    margin: 0;
+    padding: 1rem 0 0 3rem;
+    width: 30vw;
+    font-size: 2rem;
+    text-align: left;
+    background: -webkit-linear-gradient(0, rgba(44, 167, 224, 0.89), rgba(245, 208, 208, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#socrates {
+    padding-left: 13rem;
+}
+
+
+
+/**************************************** FOOTER ***************************************/
+/***************************************************************************************/
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+}
+
+footer {   
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 15rem;
+    color: rgb(233, 217, 217);
+    background-color: rgba(134, 134, 134, 0.418);
+}
+
+.icons {
+    position: relative;
+    right: -7rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+.socialIcon {
+    margin: 0;
+    padding: 0.5rem;
+    width: 2.5rem;
+}
+
+#author {
+  margin: 0.4rem 5rem 0.4rem 0;    
+  float: right;
+  display: grid;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem; 
+}
+
+#author span {
+  padding: 0.3rem;
+  display: block;
+}
+
+#author a {
+  color: #f0ccaa;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/**************************************** MENU *****************************************/
+/***************************************************************************************/
+
+#menu {
+  margin: 0;
+  height: 100vh;
+  width: 18vw;
+  background-color: #445a708a;
+  position: fixed;
+}
+
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#menu li {
+  margin: 0;
+  padding: 1rem 0 1rem 1rem;
+  border-bottom: 1px solid #445a708a;
+  color: #bab6db;
+  font-size: 1.5rem;
+}
+
+.menu-icon {
+    margin: 0;
+    padding: 1rem 1.5rem;
+    display: none;
+    
+}
+
+.menu-line {
+   margin-top: 0.5rem;
+   width: 2.2rem;
+   height: 0.2rem;
+   border-radius: 5%;
+   background-color: #bab6db;
+}
+
+/*************************************** MAIN ******************************************/
+/***************************************************************************************/
+
+.main-container {
+  margin: 3rem;
+  margin-right: 6rem;
+  width: 43.75rem;
+  height: 25rem;
+  background-color: rgba(134, 134, 134, 0.418);
+}
+
+/********************************* РЕЄСТРАЦІЯ / SIGN UP ********************************/
+/***************************************************************************************/
+
+#signUp {
+  width: 90%;
+  margin: 0 auto;
+  color: #bcb5ff;
+  font-size: 1.2rem;
+}
+
+#signUp label {
+    margin: 1.5rem 2rem;
+    display: block;
+    text-align: left;
+    position: relative;
+}
+
+#signUp input[type='text'], #signUp input[type='password'] {
+    margin: 0rem 2rem 0 0;
+    position: absolute;
+    right: 0;
+    width: 15rem;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.7rem;
+    color: #bcb5ff;
+    font-size: 1.2rem;
+    background: none;
+}
+
+#signUp input[type='text']::placeholder, #signUp input[type='password']::placeholder {
+    font-size: 1rem;
+    color: #ffdebf9a;
+
+}
+
+
+#signUp input[type="submit"] {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+/***************************************** LOGIN ***************************************/
+/***************************************************************************************/
+
+.loginForm {
+    margin: 4.8rem 3rem 0 3rem;
+    font-size: 1.2rem;
+    color: #bcb5ff;   
+}
+
+#enterLogin, #enterPassword {
+    margin: 3rem;
+    position: relative;
+    text-align: left;
+    display: block;
+}
+
+.loginForm input[type='text']::placeholder, .loginForm input[type='password']::placeholder {
+    font-size: 1rem;
+    color: #ffdebf91;
+}
+
+.loginForm input {
+    position: absolute;
+    right: 0;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.8rem;
+    width: 15rem;
+    color: #bcb5ff;
+    background: none;
+    font-size: 1.2rem;
+}
+
+.loginForm .btn {
+    margin-top: 4rem;
+}
+
+/**************************** ВИБІР ТЕСТУ / TEST SET  **********************************/
+/***************************************************************************************/
+
+.testSet {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../images/testSetBack.jpg');
+}
+
+.testSet .testudy {
+    margin: 0 auto;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.testSet > div {
+    padding-left: 18vw;
+}
+
+.testSet h1 {
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    color: #807baa;
+}
+
+.testSet h2 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: #807baa;
+}
+
+.testSet .footer-container, .ordinaryPages .footer-container {
+    width: 82vw;
+}
+
+.testContainer {
+    margin: 0;
+    padding: 2rem 2rem 8rem 0;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    justify-content: center;
+    grid-gap: 2rem;
+}
+
+.ordinaryContainer {
+    padding-left: 18vw;
+}
+
+.testCover {
+    width: 18.75rem;
+    height: 18.75rem;
+    max-width: 18.75rem;
+    max-height: 18.75rem;
+    border: 2px solid #4e4a6e;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.testCover:hover {
+    background-color: rgb(108, 112, 116);
+}
+
+.testCover:active {
+    background-color: rgb(45, 119, 194);
+    color: #439785;
+}
+
+.testCover:nth-child(1) {
+    background-image: url('../images/TestCovers/english1.png');
+}
+
+.testCover:nth-child(2) {
+    background-image: url('../images/TestCovers/geography1.png');
+}
+
+.testCover:nth-child(3) {
+    background-image: url('../images/TestCovers/history1.png');
+}
+
+.testCover:nth-child(4) {
+    background-image: url('../images/TestCovers/medicine1.png');
+}
+
+.testCover:nth-child(5) {
+    background-image: url('../images/TestCovers/programing1.png');
+}
+
+.testCover:nth-child(6) {
+    background-image: url('../images/TestCovers/libra1.png');
+}
+
+.testTitle {
+    margin: 0 auto;
+    padding-top: 7rem;
+    padding-bottom: 9.15rem;
+    display: block;
+    color: #4eccb1;
+    text-shadow: 3px 3px 5px rgb(146, 165, 146);
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.testTitle:hover {
+    color: #092c24;
+}
+
+/*********************************** TEST PARAMETERS ***********************************/
+/***************************************************************************************/
+
+.testParameters {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../images/testSetBack.jpg');
+}
+
+.testParameters > section {
+    padding-left: 18vw;
+}
+
+.testParameters .footer-container {
+    width: 82vw;
+}
+
+.testParameters h2 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: #807baa;
+}
+
+.testParameters .testudy {
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.parametersWrapper {
+    margin: 0 auto;
+    padding: 0 0 5rem 0;
+}
+
+.parametersForm {
+    margin: 0 auto 0 auto;
+    width: 40rem;
+    height: 20rem;
+}
+
+.parametersForm label {
+    margin: 0;
+    padding: 3rem 1rem 1rem 0rem;
+    display: block;
+    position: relative;
+    color: #807baa;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.parametersForm select {
+    margin: -0.5rem 0 0 0;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    right: 10rem;
+    width: 15rem;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.7rem;
+    color: #807baa;
+    font-size: 1.5rem;
+    background: none;
+}
+
+.parametersForm input {
+    margin: -0.5rem 0 0 0;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    position: absolute;
+    right: 10rem;
+    width: 13.5rem;
+    border: none;
+    border-bottom: 2px solid #9698ccb4;
+    line-height: 1.7rem;
+    color: #807baa;
+    font-size: 2rem;
+    font-weight: bold;
+    background: none;
+    pointer-events: none;
+}
+
+.parametersForm option { 
+    border-bottom: 2px solid #9698ccb4;
+    background: none;
+}
+
+.parametersForm .btn {
+    margin: 3rem auto;
+    display: block;
+}
+
+/*************************************** TESTS *****************************************/
+/***************************************************************************************/
+
+.testPage {
+    margin: 0;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+    background: url('../images/birdBranch3.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: left bottom;
+    
+}
+
+.testPage h1 {
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    color: #615aa0;
+}
+
+.timerString {
+    margin: 0;
+    padding: 2rem 2rem 2rem 9rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #da9e83;
+}
+
+.testDesk {
+    margin: 2rem 0 0 5rem;
+    width: 60rem;
+}
+
+.testPrepared {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+}
+
+.testPrepared p, .resultQuestion {
+    padding-left: 4rem;
+    padding-bottom: 4rem;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #615aa0; 
+}
+
+.testImage {
+    display: block;
+    margin: 0 auto;
+    padding: 0rem 5rem 2rem 0rem;
+}
+
+.testPrepared ul {
+    list-style: none;
+}
+
+.answers li, .resultAnswer {
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 1rem;
+    width: 80%;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #615aa0;
+    background-color: rgba(24, 26, 26, 0.308);
+}
+
+.answers .correctAnswer {
+    background-color: rgba(167, 219, 124, 0.719);
+}
+
+ .answers .falseAnswer {
+    background-color: rgba(245, 183, 158, 0.753);
+}
+
+.testPage footer {
+    background-color: #4e4a6ea6;
+}
+
+/*********************************** TEST RESULT ***************************************/
+/***************************************************************************************/
+
+.ordinaryPages {
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-bottom: 8rem;
+    background-image: url('../images/hexagonals.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.ordinaryPages h1 {
+    margin: 0;
+    padding: 5rem;
+    color: #615aa0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media (min-width: 769px) {
+    .ordinaryPages h1 {
+        padding: 5rem 5rem 5rem 10rem;
+    }
+}
+
+
+.ordinaryPages h1 span {
+    margin: 3rem;
+    font-size: 4rem;
+}
+
+/* .goodPercent {
+
+}
+
+.mediorcePercent {
+
+}
+
+.badPercent {
+
+} */
+
+.testResult .resultQuestion {
+    padding: 3rem 8rem;
+    background-color: rgba(255, 228, 196, 0.527);
+}
+
+.testResult .resultAnswer {
+    margin: 1rem 8rem 1rem 8rem;
+    padding: 1rem;
+    background-color: rgba(167, 219, 124, 0.719);
+}
+
+.ordinaryPages .btn {
+    margin: 2rem auto;
+    width: 15rem;
+    display: block;
+}
+
+.ordinaryPages footer {
+    color: rgb(63, 57, 57);
+    background-color: rgba(204, 196, 226, 0.808);
+}
+
+.ordinaryPages #author a {
+    color: #9277a8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/************************************* PROFILE *****************************************/
+/***************************************************************************************/
+.profile {
+    height: 100vh;
+}
+
+.profileData {
+    margin: 0 auto;
+    padding: 2rem;
+    display: block;
+    width: 30vw;
+    font-size: 1.3rem;
+    font-weight: 450;
+    color: #615aa0;
+    background-color: rgba(255, 228, 196, 0.527);
+}
+
+.profileData h2 {
+    margin: 0 0 1rem 0
+}
+
+/************************************* ABOUT US ****************************************/
+/***************************************************************************************/
+
+.aboutText {
+    margin: 2rem;
+    padding: 2rem 3rem;
+    background-color: rgba(255, 228, 196, 0.527); 
+    text-align: justify;
+}
+
+.aboutText p {
+    margin-bottom: 5rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: #615aa0;
+    font-size: 1.5rem;
+}
+
+.aboutText .aboutContacts {
+    margin: 1rem 0;
+    display: block;
+    line-height: 2rem;
+    font-weight: 500;
+    font-style: italic; 
+    color: #615aa0;
+    font-size: 1.5rem;
+}
+
+.map {
+    margin: 2rem auto;
+    width: 70vw;
+    height: auto;
+}
+
+.map iframe{
+    display: block;
+    margin: 0 auto;
+    width: 50rem;
+    height: 30rem;
+}
+
+.statContainer {
+    margin: 3rem;
+    padding: 2rem;
+    color: #615aa0;
+    background-color: rgba(255, 228, 196, 0.527);
+}
+
+.statItem {
+    margin: 1.5rem;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #615aa0;
+
+}
+

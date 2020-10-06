@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import TestPrepared from '../components/TestPrepared';
-import Timer from '../components/Timer';
-import Footer from '../components/Footer';
+import TestPrepared from '../common/TestPrepared';
+import Timer from '../common/Timer';
+import Footer from '../common/footer-component/footer';
 
 export default class TestPage extends Component {
   getChapterName() {

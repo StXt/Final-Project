@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Menu from '../components/Menu';
+import Footer from '../common/footer-component/footer';
+import Menu from '../common/Menu';
 
 export default class AboutUs extends Component {
   mapUrl = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.24442002116!2d28.40931923173037!3d49.23385498530954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c5eb3978a07%3A0x591bf4ded045dfa!2z0JLQuNC90L3QuNGG0LrQuNC5INC90LDRhtC40L7QvdCw0LvRjNC90YvQuSDRgtC10YXQvdC40YfQtdGB0LrQuNC5INGD0L3QuNCy0LXRgNGB0LjRgtC10YI!5e0!3m2!1sru!2sua!4v1559637264037!5m2!1sru!2sua';
@@ -10,7 +10,7 @@ export default class AboutUs extends Component {
     if (localStorage.currentUser === "") {
       return (
         <Redirect to="/" />
-      )
+      );
     }
 
     return (

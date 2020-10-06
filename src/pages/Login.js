@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import isUser from '../functions/isUser';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import { Redirect } from 'react-router-dom';
-import {history} from '../components/react-history';
+import { history } from '../common/react-history';
+import isUser from '../functions/isUser';
+import Header from '../common/header-component/Header';
+import Footer from '../common/footer-component/footer';
+
+
 
 export default class Login extends Component {
   constructor(props) {

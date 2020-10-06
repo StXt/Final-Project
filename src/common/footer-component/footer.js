@@ -1,8 +1,8 @@
 import React from 'react';
-import facebook from '../images/icons/facebook.png';
-import twitter from '../images/icons/twitter.png';
-import whatsapp from '../images/icons/whatsapp.png';
-import instagram from '../images/icons/instagram.png';
+import facebook from '../../images/icons/facebook.png';
+import twitter from '../../images/icons/twitter.png';
+import whatsapp from '../../images/icons/whatsapp.png';
+import instagram from '../../images/icons/instagram.png';
 
 export default class Footer extends React.Component {
   render() {

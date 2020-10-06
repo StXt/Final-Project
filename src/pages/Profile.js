@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import {history} from '../components/react-history';
 import { Redirect } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Menu from '../components/Menu';
+import { history } from '../common/react-history';
+
+import Footer from '../common/footer-component/footer';
+import Menu from '../common/Menu';
 
 export default class Profile extends Component {
   state = {

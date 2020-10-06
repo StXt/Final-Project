@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
+import './styles/style.css';
+import './styles/tablet.css';
+import './styles/mobile.css';
+import './styles/mobile.min.css';
 import * as serviceWorker from './serviceWorker';
 
 // Use push, replace, and go to navigate around.

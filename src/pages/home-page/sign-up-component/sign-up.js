@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import addUser from '../functions/addUser';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { history } from '../components/react-history';
+import { history } from '../../../common/react-history';
+
+import addUser from '../../../functions/addUser';
+import Header from '../../../common/header-component/Header';
+import Footer from '../../../common/footer-component/footer';
+
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -45,6 +47,9 @@ export default class SignUp extends Component {
     this.state = {
       isRegister: null
     };
+
+    this.combinedFunc = this.combinedFunc.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   goBack(e) {
@@ -56,7 +61,6 @@ export default class SignUp extends Component {
 
   combinedFunc(e) {
     e.preventDefault();
-
     let isAdded = addUser(); // is launched in any case 
     
     if (isAdded) { // will be true/false
@@ -66,22 +70,21 @@ export default class SignUp extends Component {
 
   render() {    
     if(this.state.isRegister === true) {
-      
       return (
         <Redirect to='/test-set' />
-      )
+      );
     }
 
     if (this.state.isRegister === false) {
       return (// Form component + Fail div
         <Redirect to="/login" />
-      )
+      );
     }
 
     if (this.state.back === true) {
       return (
         <Redirect to="/login" />
-      )
+      );
     }
 
     return (

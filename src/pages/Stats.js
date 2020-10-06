@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Menu from '../components/Menu';
-import TestStats from '../components/TestStats';
+import Footer from '../common/footer-component/footer';
+import Menu from '../common/Menu';
+import TestStats from '../common/TestStats';
 
 export default class Stats extends Component {
   render() {

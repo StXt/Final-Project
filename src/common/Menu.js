@@ -1,5 +1,6 @@
 import React from 'react';
 import {history} from './react-history';
+import './other.css';
 import { Redirect } from 'react-router-dom';
 
 export default class Menu extends React.Component {
@@ -22,7 +23,7 @@ export default class Menu extends React.Component {
           <div className="menu-line"></div>
         </article>
         <ul onClick={this.changePage}>
-          <li className="liItem">Головна</li>
+          <li id="changed" className="liItem">Головна</li>
           <li className="liItem">Профіль</li>
           <li className="liItem">Тести</li>
           <li className="liItem">Статистика</li>
