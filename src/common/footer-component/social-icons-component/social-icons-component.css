@@ -1,0 +1,14 @@
+.footer__icons {
+  align-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  position: relative;
+  right: -7rem;
+}
+
+.footer__icon {
+  margin: 0;
+  padding: 0.5rem;
+  width: 2.5rem;
+}

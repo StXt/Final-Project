@@ -1,0 +1,15 @@
+.footer__author {  
+  display: grid;
+  align-content: center;
+  font-size: 0.9rem;
+}
+
+.footer__description {
+  padding: 0 2rem 0 0;
+}
+
+.footer__name {
+  color: #f0ccaa;
+  font-weight: 600;
+  text-decoration: none;
+}
