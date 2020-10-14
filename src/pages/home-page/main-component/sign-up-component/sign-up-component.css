@@ -1,0 +1,38 @@
+#signUp {
+  width: 90%;
+  margin: 0 auto;
+  color: #bcb5ff;
+  font-size: 1.2rem;
+}
+
+#signUp label {
+  margin: 1.5rem 2rem;
+  display: block;
+  text-align: left;
+  position: relative;
+}
+
+#signUp input[type='text'], #signUp input[type='password'] {
+  margin: 0rem 2rem 0 0;
+  position: absolute;
+  right: 0;
+  width: 15rem;
+  border: none;
+  border-bottom: 2px solid #9698ccb4;
+  line-height: 1.7rem;
+  color: #bcb5ff;
+  font-size: 1.2rem;
+  background: none;
+}
+
+#signUp input[type='text']::placeholder, #signUp input[type='password']::placeholder {
+  font-size: 1rem;
+  color: #ffdebf9a;
+
+}
+
+
+#signUp input[type="submit"] {
+  margin: 1rem auto;
+  padding: 1rem;
+}

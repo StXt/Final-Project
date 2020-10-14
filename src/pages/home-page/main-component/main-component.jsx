@@ -8,6 +8,7 @@ import './main-component.css';
 import Welcome from './welcome-component/welcome-component';
 import Login from './login-component/login-component';
 import SignUp from './sign-up-component/sign-up-component';
+import PageNotFound from '../../page-not-found-page/page-not-found-page';
 
 class Main extends Component {
   render() {
@@ -16,6 +17,7 @@ class Main extends Component {
         <Route path="/sign-up" component={SignUp} />
         <Route path="/login" component={Login} />
         <Route exact path="/" component={Welcome} />
+        <Route path="*" component={PageNotFound} />    
       </Switch>
     );
   };

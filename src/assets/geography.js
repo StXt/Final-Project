@@ -1,11 +1,11 @@
-import agroregions from '../images/tests/geography/agroregions.jpg';
-import animals from '../images/tests/geography/animals.jpg';
-import demography from '../images/tests/geography/demography.jpg';
-import industry from '../images/tests/geography/industry.jpg';
-import rivers from '../images/tests/geography/rivers.jpg';
-import soil from '../images/tests/geography/soil.jpg';
-import tree from '../images/tests/geography/tree.jpg';
-import world from '../images/tests/geography/world.jpg';
+import agroregions from '../assets/images/tests/geography/agroregions.jpg';
+import animals from '../assets/images/tests/geography/animals.jpg';
+import demography from '../assets/images/tests/geography/demography.jpg';
+import industry from '../assets/images/tests/geography/industry.jpg';
+import rivers from '../assets/images/tests/geography/rivers.jpg';
+import soil from '../assets/images/tests/geography/soil.jpg';
+import tree from '../assets/images/tests/geography/tree.jpg';
+import world from '../assets/images/tests/geography/world.jpg';
 
 // Correct answer goes first
 let geography = [

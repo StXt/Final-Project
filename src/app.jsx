@@ -14,6 +14,7 @@ import TestParameters from './pages/testing-parameters';
 import AboutUs from './pages/about-us';
 import Stats from './pages/stats';
 import Profile from './pages/profile';
+import PageNotFound from './pages/page-not-found-page/page-not-found-page'
 
 class App extends Component {
   render() {
@@ -27,7 +28,8 @@ class App extends Component {
           <Route path='/test-page' component={TestGround}/>
           <Route path='/test-result' component={TestResult}/>          
           <Route path='/stats' component={Stats}/>          
-          <Route path='/' component={HomePage}/>     
+          <Route path='/' component={HomePage}/>
+          
         </Switch>
       </Router>
     );

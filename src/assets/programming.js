@@ -1,4 +1,4 @@
-import window1 from '../images/tests/programming/window1.jpg';
+import window1 from '../assets/images/tests/programming/window1.jpg';
 
 // Correct answer goes first
 let programming = [

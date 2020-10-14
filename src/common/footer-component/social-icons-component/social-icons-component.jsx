@@ -1,10 +1,10 @@
 import React from 'react';
 import './social-icons-component.css';
 
-import facebook from '../../../images/icons/facebook.png';
-import twitter from '../../../images/icons/twitter.png';
-import whatsapp from '../../../images/icons/whatsapp.png';
-import instagram from '../../../images/icons/instagram.png';
+import facebook from '../../../assets/images/icons/facebook.png';
+import twitter from '../../../assets/images/icons/twitter.png';
+import whatsapp from '../../../assets/images/icons/whatsapp.png';
+import instagram from '../../../assets/images/icons/instagram.png';
 
 export default function SocialIcons() {
   return(

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import './sign-up-component.css';
+
 import { Redirect } from 'react-router-dom';
 import { history } from '../../../../common/react-history';
 import addUser from '../../../../functions/addUser';
+import { signUpFields } from '../../../../assets/sign-up-fields';
+import FormField from '../../../../common/form-field-component/form-field-component';
+import Button from '../../../../common/button-components/button-component';
 
 class SignUp extends Component {
   constructor(props) {
@@ -51,35 +56,12 @@ class SignUp extends Component {
     } */
 
     return (
-      <form id="signUp">
-        <label>
-          <span>Ім'я</span>
-          <input type="text" name="firstName" id="firstName" placeholder="Name"/>
-        </label>
-        <label>
-          <span>Прізвище</span>
-          <input type="text" name="lastName" id="lastName" placeholder="Last name"/>
-        </label>
-        <label>
-          <span>Логін</span>
-          <input type="text" name="login" id="login" placeholder="Login"/>
-        </label>
-        <label>
-          <span>Пароль</span>
-          <input type="password" name="password" id="password" placeholder="password"/>
-        </label>
-        <label>
-          <span>Повторіть пароль</span>
-          <input type="password" name="password" id="checkPassword" placeholder="password"/>
-        </label>
-        <div className="buttons">
-          <button onClick={this.combinedFunc} className="btn">
-            Зберегти
-          </button>
-          <button onClick={this.goBack} className="btn">
-            Увійти
-          </button>
-          </div>
+      <form className="sign-up">
+        {signUpFields.map((field) => <FormField {...field} />)}
+        <div className="sign-up__buttons">
+          <Button name={'Зберегти'} onClick={this.combinedFunc} />
+          <Button name={'Назад'} onClick={this.goBack} />  
+        </div>
       </form>
     );
   }

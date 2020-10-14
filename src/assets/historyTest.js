@@ -1,9 +1,9 @@
-import walls from '../images/tests/history/walls.jpg';
-import architecture from '../images/tests/history/architecture.jpg';
-import bismark from '../images/tests/history/bismark.jpg';
-import bombs from '../images/tests/history/bombs.jpg';
-import monkey from '../images/tests/history/monkey.jpg';
-import religion from '../images/tests/history/religion.jpg';
+import walls from '../assets/images/tests/history/walls.jpg';
+import architecture from '../assets/images/tests/history/architecture.jpg';
+import bismark from '../assets/images/tests/history/bismark.jpg';
+import bombs from '../assets/images/tests/history/bombs.jpg';
+import monkey from '../assets/images/tests/history/monkey.jpg';
+import religion from '../assets/images/tests/history/religion.jpg';
 
 // Correct answer goes first
 let historyTest = [

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {history} from './react-history';
 import { Redirect } from 'react-router-dom';
-import { geography } from '../data/geography';
-import { english } from '../data/english';
-import { programming } from '../data/programming';
-import { historyTest } from '../data/historyTest';
-import { law } from '../data/law';
-import { medicine } from '../data/medicine';
+import { geography } from '../assets/geography';
+import { english } from '../assets/english';
+import { programming } from '../assets/programming';
+import { historyTest } from '../assets/historyTest';
+import { law } from '../assets/law';
+import { medicine } from '../assets/medicine';
 import stirTests from '../functions/stirTests';
 
 export default class TestArea extends Component {
