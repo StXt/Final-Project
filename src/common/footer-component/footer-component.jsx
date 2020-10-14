@@ -3,9 +3,7 @@ import './footer-component.css';
 import Author from './author-component/author-component';
 import SocialIcons from './social-icons-component/social-icons-component';
 
-
-
-export default class Footer extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
@@ -15,3 +13,5 @@ export default class Footer extends React.Component {
     )
   }
 }
+
+export default Footer;

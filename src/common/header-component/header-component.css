@@ -1,0 +1,34 @@
+.header__title {
+  margin: 0;
+  padding: 2rem 0 0 3rem;
+  width: 30vw;
+  background: -webkit-linear-gradient(0, rgba(230, 191, 21, 0.8), rgba(245, 208, 208, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.header__motto {
+  margin: 0;
+  padding: 1rem 0 0 7rem;
+  width: 30vw;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: left;
+
+}
+
+.header__author_gradient,
+.header__motto_gradient {
+  background: -webkit-linear-gradient(0, rgba(44, 167, 224, 0.89), rgba(245, 208, 208, 0.8));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header__author {
+  text-align: right;
+  font-size: 2.1rem;
+}

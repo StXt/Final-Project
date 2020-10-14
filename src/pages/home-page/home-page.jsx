@@ -1,11 +1,25 @@
 import React, { Component } from 'react';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import Header from '../../common/header-component/header-component';
 import Main from './main-component/main-component';
 import Footer from '../../common/footer-component/footer-component';
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      page: 'main',
+    };
+
+    this.changePage = this.changePage.bind(this);
+  }
+
+  changePage(pageName) {
+    this.setState({
+      page: pageName,
+    });
+  }
+
   render() {
     return (
       <div className="home">

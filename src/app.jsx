@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+
 import HomePage from './pages/home-page/home-page';
-import Login from './pages/login';
-import SignUp from './pages/home-page/sign-up-component/sign-up';
+
 import TestSet from './pages/testing-set-page';
 import TestGround from './pages/testing-page';
 import TestResult from './pages/testing-result';
@@ -14,20 +18,18 @@ import Profile from './pages/profile';
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>     
+      <Router>     
         <Switch>
-          <Route exact path='/' component={HomePage}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/sign-up' component={SignUp}/>
+          <Route path='/about-us' component={AboutUs}/>
+          <Route path='/profile' component={Profile}/>
           <Route path='/test-set' component={TestSet}/> 
           <Route path='/test-parameters' component={TestParameters}/> 
           <Route path='/test-page' component={TestGround}/>
-          <Route path='/test-result' component={TestResult}/>
-          <Route path='/about-us' component={AboutUs}/>
-          <Route path='/stats' component={Stats}/>
-          <Route path='/profile' component={Profile}/>     
+          <Route path='/test-result' component={TestResult}/>          
+          <Route path='/stats' component={Stats}/>          
+          <Route path='/' component={HomePage}/>     
         </Switch>
-      </BrowserRouter>
+      </Router>
     );
   }
 }

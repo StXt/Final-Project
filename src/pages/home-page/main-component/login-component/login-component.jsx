@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { history } from '../common/react-history';
-import isUser from '../functions/isUser';
-import Header from '../common/header-component/header-component';
-import Footer from '../common/footer-component/footer-component';
+import { history } from '../../../../common/react-history';
+import isUser from '../../../../functions/isUser';
 
-
-
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -78,38 +74,12 @@ export default class Login extends Component {
       return (
         <Redirect to="/test-set"/>
       )
-    } else if (this.state.isFailed === true) {
-      return (
-        <div className="home">
-        <div className="head-main">
-          <div className="header-container">
-            <Header />
-          </div>
-          <div className="main-container">
-            {this.loginFail}
-          </div>
-        </div>
-        <div className="footer-container">
-          <Footer />
-        </div>
-      </div>
-      )
+    } else if (this.state.isFailed) {
+      return this.loginFail;
     } else {
-      return (
-        <div className="home">
-          <div className="head-main">
-            <div className="header-container">
-              <Header />
-            </div>
-            <div className="main-container">
-              {this.loginForm}
-            </div>
-          </div>
-          <div className="footer-container">
-            <Footer />
-          </div>
-        </div>
-      )
+      return this.loginForm;
     }
   }
 }
+
+export default Login;
