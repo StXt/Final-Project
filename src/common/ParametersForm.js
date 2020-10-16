@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {history} from './react-history';
+import history from '../history';
 import { Redirect } from 'react-router-dom';
 
 export default class ParametersForm extends Component {

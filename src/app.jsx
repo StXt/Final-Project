@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
+  Router,
   Route,
   Switch
 } from 'react-router-dom';
-
+import history from './history';
 import HomePage from './pages/home-page/home-page';
 
 import TestSet from './pages/testing-set-page';
@@ -14,12 +14,11 @@ import TestParameters from './pages/testing-parameters';
 import AboutUs from './pages/about-us';
 import Stats from './pages/stats';
 import Profile from './pages/profile';
-import PageNotFound from './pages/page-not-found-page/page-not-found-page'
 
 class App extends Component {
   render() {
     return (
-      <Router>     
+      <Router history={history}>     
         <Switch>
           <Route path='/about-us' component={AboutUs}/>
           <Route path='/profile' component={Profile}/>
@@ -29,7 +28,6 @@ class App extends Component {
           <Route path='/test-result' component={TestResult}/>          
           <Route path='/stats' component={Stats}/>          
           <Route path='/' component={HomePage}/>
-          
         </Switch>
       </Router>
     );

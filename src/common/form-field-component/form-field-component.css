@@ -1,0 +1,26 @@
+.form-field {
+  display: block;
+  margin: 1.5rem 2rem;
+  position: relative;
+  text-align: left;
+}
+
+.form-field__input {
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 2px solid #9698ccb4;
+  color: #bcb5ff;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  margin: 0rem 2rem 0 0;
+  padding-left: 0.35rem;
+  position: absolute;
+  right: 0;
+  width: 17rem;
+}
+
+.form-field__input::placeholder {
+  color: #ffdebf9a;
+  font-size: 1rem;
+}

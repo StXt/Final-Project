@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
+import history from '../../../../history';
 import './sign-up-component.css';
 
-import { Redirect } from 'react-router-dom';
-import { history } from '../../../../common/react-history';
 import addUser from '../../../../functions/addUser';
 import { signUpFields } from '../../../../assets/sign-up-fields';
 import FormField from '../../../../common/form-field-component/form-field-component';
@@ -16,18 +16,16 @@ class SignUp extends Component {
       isRegister: false,
     };
 
-    this.combinedFunc = this.combinedFunc.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.goBack = this.goBack.bind(this);
   }
 
   goBack(e) {
     e.preventDefault();
-    history.push('/sign-up');
-    this.setState({back: true});
+    history.goBack();
   }
 
-
-  combinedFunc(e) {
+  handleSubmit(e) {
     e.preventDefault();
     let isAdded = addUser(); // is launched in any case 
     
@@ -36,31 +34,21 @@ class SignUp extends Component {
     }
   }
 
-  render() {    
-/*     if(this.state.isRegister) {
+  render() {
+    if(this.state.isRegister) {
       return (
         <Redirect to='/test-set' />
       );
     }
 
-    if (!this.state.isRegister) {
-      return (// Form component + Fail div
-        <Redirect to="/login" />
-      );
-    }
-
-    if (this.state.back === true) {
-      return (
-        <Redirect to="/login" />
-      );
-    } */
-
     return (
       <form className="sign-up">
-        {signUpFields.map((field) => <FormField {...field} />)}
+        <div className="sign-up__fields">
+          {signUpFields.map((fieldProps) => <FormField {...fieldProps} key={fieldProps.id} />)}
+        </div>
         <div className="sign-up__buttons">
-          <Button name={'Зберегти'} onClick={this.combinedFunc} />
-          <Button name={'Назад'} onClick={this.goBack} />  
+          <Button name={'Назад'} handleClick={this.goBack} />
+          <Button name={'Зберегти'} handleClick={this.handleSubmit} />  
         </div>
       </form>
     );

@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../common/footer-component/footer-component';
 
 function PageNotFound() {
   return (

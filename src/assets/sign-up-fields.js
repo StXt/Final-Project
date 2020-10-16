@@ -5,6 +5,7 @@ export const signUpFields = [
     name: 'firstName',
     id: 'firstName',
     placeholder: 'First name',
+    value: '',
   },
   {
     showedName: 'Прізвище',
@@ -12,6 +13,7 @@ export const signUpFields = [
     name: 'lastName',
     id: 'lastName',
     placeholder: 'Last name',
+    value: '',
   },
   {
     showedName: 'Логін',
@@ -19,6 +21,7 @@ export const signUpFields = [
     name: 'login',
     id: 'login',
     placeholder: 'Login',
+    value: '',
   },
   {
     showedName: 'Пароль',
@@ -26,12 +29,14 @@ export const signUpFields = [
     name: 'password',
     id: 'password',
     placeholder: 'Password',
+    value: '',
   },
   {
     showedName: 'Повторіть пароль',
     type: 'password',
-    name: 'password',
+    name: 'repeatPassword',
     id: 'checkPassword',
     placeholder: 'Password',
+    value: '',
   },
 ];

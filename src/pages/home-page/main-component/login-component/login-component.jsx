@@ -1,28 +1,14 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { history } from '../../../../common/react-history';
+import history from '../../../../history';
+import './login-component.css';
 import isUser from '../../../../functions/isUser';
+import FormField from '../../../../common/form-field-component/form-field-component';
+import Button from '../../../../common/button-components/button-component';
 
 class Login extends Component {
   constructor(props) {
     super(props);
-
-    this.loginForm = (
-      <form className="loginForm">
-        <label id="enterLogin">
-          <span>Логін: </span>
-          <input type="text" placeholder="Login"/>
-        </label>
-        <label  id="enterPassword">
-          <span>Пароль: </span>
-          <input type="password" placeholder="password"/>
-        </label>
-        <div className="buttons">
-          <button onClick={this.combinedFunc} className="btn">Увійти</button>
-          <button onClick={this.goBack} className="btn">Зареєструватися</button>
-        </div>
-      </form>
-    );
 
     this.loginFail = (
       <div>
@@ -38,8 +24,7 @@ class Login extends Component {
   
   goBack = (e) => {
     e.preventDefault();
-    history.push('/login');
-    this.setState({back: true});
+    history.goBack();
   }
 
   combinedFunc = (e) => {
@@ -50,10 +35,8 @@ class Login extends Component {
     if(isUser(login, password)) {
       let userKey = `${login} | ${password}`;
       localStorage.setItem('currentUser', userKey);
-      console.log('isEnter: true');
       this.setState({isEnter: true});
     } else {
-      console.log('isEnter: false');
       this.setState({
         isEnter: false,
         isFailed: true
@@ -62,7 +45,7 @@ class Login extends Component {
   }
 
   render() {
-    if (this.state.back === true) {
+/*     if (this.state.back) {
       history.push('/login');
       return (
         <Redirect to="/sign-up" />
@@ -76,9 +59,27 @@ class Login extends Component {
       )
     } else if (this.state.isFailed) {
       return this.loginFail;
-    } else {
-      return this.loginForm;
-    }
+    } else { */
+    return (
+      <form className="login-form">
+        <FormField 
+          showedName={'Логін'}
+          type={'text'}
+          name={'login'}
+          placeholder={'Login'} />
+
+        <FormField 
+          showedName={'Пароль'}
+          type={'password'}
+          name={'password'}
+          placeholder={'Password'} />
+
+        <div className="login-form__buttons">
+          <Button name={'Назад'} handleClick={this.goBack} />
+          <Button name={'Увійти'} handleClick={this.combinedFunc} />
+        </div>
+      </form>
+    );
   }
 }
 

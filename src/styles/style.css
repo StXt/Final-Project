@@ -162,39 +162,7 @@ body {
 /***************************************** LOGIN ***************************************/
 /***************************************************************************************/
 
-.loginForm {
-    margin: 4.8rem 3rem 0 3rem;
-    font-size: 1.2rem;
-    color: #bcb5ff;   
-}
 
-#enterLogin, #enterPassword {
-    margin: 3rem;
-    position: relative;
-    text-align: left;
-    display: block;
-}
-
-.loginForm input[type='text']::placeholder, .loginForm input[type='password']::placeholder {
-    font-size: 1rem;
-    color: #ffdebf91;
-}
-
-.loginForm input {
-    position: absolute;
-    right: 0;
-    border: none;
-    border-bottom: 2px solid #9698ccb4;
-    line-height: 1.8rem;
-    width: 15rem;
-    color: #bcb5ff;
-    background: none;
-    font-size: 1.2rem;
-}
-
-.loginForm .btn {
-    margin-top: 4rem;
-}
 
 /**************************** ВИБІР ТЕСТУ / TEST SET  **********************************/
 /***************************************************************************************/

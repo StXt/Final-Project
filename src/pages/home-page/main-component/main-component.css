@@ -17,9 +17,15 @@
   line-height: 2rem;
 }
 
-.sign-up__buttons,
 .main__buttons {
-  padding-top: 2rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: 2.6rem;
+}
+
+@media(max-width: 1166px) {
+  .main__buttons {
+    top: 0.6rem;
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {history} from './react-history';
+import history from '../../src/history';
 import './other.css';
 import { Redirect } from 'react-router-dom';
 
@@ -46,7 +46,6 @@ export default class Menu extends React.Component {
 
   changePage = (e) => {
     let target = e.target;
-    console.dir(target);
     
     while (target.className !== 'menuContainer') {
       if (target.className === 'liItem') {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import {history} from './react-history';
+import history from '../history';
 import Test from './Test';
 
 
