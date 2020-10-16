@@ -7,12 +7,6 @@ import './styles/mobile.css';
 import './styles/mobile.min.css';
 import * as serviceWorker from './serviceWorker';
 
-// Use push, replace, and go to navigate around.
-// history.push('/');
-
-// To stop listening, call the function returned from listen().
-// unlisten();
-
 ReactDOM.render((
   <App />
 ), document.getElementById('root'));

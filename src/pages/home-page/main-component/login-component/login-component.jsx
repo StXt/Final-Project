@@ -18,7 +18,10 @@ class Login extends Component {
     )
 
     this.state = {
-      isEnter: false
+      isEntered: false,
+      isFailed: false,
+      login: '',
+      password: '',
     }
   }
   
@@ -27,7 +30,7 @@ class Login extends Component {
     history.goBack();
   }
 
-  combinedFunc = (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     let login = document.forms[0].elements[0].value;
     let password = document.forms[0].elements[1].value;
@@ -35,48 +38,53 @@ class Login extends Component {
     if(isUser(login, password)) {
       let userKey = `${login} | ${password}`;
       localStorage.setItem('currentUser', userKey);
+      console.log('hi 38');
       this.setState({isEnter: true});
     } else {
       this.setState({
-        isEnter: false,
-        isFailed: true
+        isFailed: true,
       });
     }
   }
 
+  handleChange = (field, e) => {
+    this.setState({[field]: e.target.value });
+  }
+
   render() {
-/*     if (this.state.back) {
-      history.push('/login');
-      return (
-        <Redirect to="/sign-up" />
-      )
+    if (this.state.isEnter) {
+      history.push('/test-set');
+      history.goForward();
     }
 
-    if (this.state.isEnter) {
-      history.push('/login');
-      return (
-        <Redirect to="/test-set"/>
-      )
-    } else if (this.state.isFailed) {
-      return this.loginFail;
-    } else { */
     return (
       <form className="login-form">
         <FormField 
+          name={'login'}
+          placeholder={'Login'}
           showedName={'Логін'}
           type={'text'}
-          name={'login'}
-          placeholder={'Login'} />
-
+          value={this.state.login}
+          handleChange={(e) => this.handleChange('login', e)}         
+          />
         <FormField 
+          name={'password'}
+          placeholder={'Password'} 
           showedName={'Пароль'}
           type={'password'}
-          name={'password'}
-          placeholder={'Password'} />
+          value={this.state.password}
+          handleChange={(e) => this.handleChange('password', e)}
+          />
+
+        {this.state.isFailed &&  
+          <div>
+            Невірний логін або пароль
+          </div>
+        }
 
         <div className="login-form__buttons">
           <Button name={'Назад'} handleClick={this.goBack} />
-          <Button name={'Увійти'} handleClick={this.combinedFunc} />
+          <Button name={'Увійти'} handleClick={this.handleSubmit} />
         </div>
       </form>
     );

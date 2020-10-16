@@ -7,10 +7,13 @@ function FormField(props) {
       <span className="form-field__name">{props.showedName}</span>
       <input 
         className="form-field__input"
-        type={props.type}
-        name={props.name}
         id={props.id}
-        placeholder={props.placeholder} />
+        name={props.name}
+        onChange={(e) => props.handleChange(e)}
+        placeholder={props.placeholder} 
+        type={props.type}
+        value={props.value}
+        />
     </label>
   );
 }
